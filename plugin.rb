@@ -9,6 +9,7 @@ module Plugins
         LOOMIO_ORG_PAGES = %w(about
                               browser_not_supported
                               crowdfunding_celebration
+                              marketing
                               pricing
                               privacy
                               purpose
@@ -26,6 +27,15 @@ module Plugins
         plugin.use_page :community,     'https://www.loomio.org/g/WmPCB3IR/loomio-community',    redirect: true
         plugin.use_page :timeline,      'http://www.tiki-toki.com/timeline/entry/313361/Loomio', redirect: true
 
+        plugin.extend_class RootController do
+          def index
+            if current_user_or_visitor.is_logged_in?
+              redirect_to dashboard_path
+            else
+              redirect_to marketing_path
+            end
+          end
+        end
       end
     end
   end
