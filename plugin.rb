@@ -1,10 +1,10 @@
 module Plugins
   module LoomioOrg
     class Plugin < Plugins::Base
-      setup! :loomio_org do |plugin|
+      setup! :loomio_org_plugin do |plugin|
         plugin.enabled = true
 
-        plugin.use_component :angular_feedback_card, outlet: 'after_start_menu'
+        plugin.use_component :angular_feedback_card, outlet: :after_start_menu
 
         LOOMIO_ORG_PAGES = %w(about
                               browser_not_supported

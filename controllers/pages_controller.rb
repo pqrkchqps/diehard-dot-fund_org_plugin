@@ -1,10 +1,14 @@
-class PagesController < ActionController::Base
+class PagesController < ApplicationController
   prepend_view_path 'plugins/loomio_org/views'
   Plugins::LoomioOrg::Plugin::LOOMIO_ORG_PAGES.each { |page| define_method page, ->{} }
 
   def marketing
-    @stories = BlogStory.order('published_at DESC').limit(4)
-    render layout: false
+    if current_user_or_visitor.is_logged_in?
+      redirect_to dashboard_path
+    else
+      @stories = BlogStory.order('published_at DESC').limit(4)
+      render layout: false
+    end
   end
 
   def third_parties
