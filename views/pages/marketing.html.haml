@@ -17,6 +17,8 @@
             %br
     %main
       .row.hero
+        .container.home-flash{style: "margin: 0;padding: 0;width: 100%;"}
+          = render 'application/flash_messages', :flash => flash
         %section.content
           =image_tag "globe.png", class: "image"
           %h1.header= t :"frontpage.hero.header_html"
