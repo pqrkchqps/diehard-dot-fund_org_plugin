@@ -27,6 +27,12 @@ module Plugins
         plugin.use_page :community,     'https://www.loomio.org/g/WmPCB3IR/loomio-community',    redirect: true
         plugin.use_page :timeline,      'http://www.tiki-toki.com/timeline/entry/313361/Loomio', redirect: true
 
+        plugin.extend_class ApplicationHelper do
+          def hosted_by_loomio?
+            true
+          end
+        end
+
         plugin.extend_class RootController do
           def index
             if current_user_or_visitor.is_logged_in?
