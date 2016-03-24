@@ -9,10 +9,11 @@ describe PagesController, type: :controller do
       expect(response).to render_template :marketing
     end
 
-    it 'takes you to the dashboard when logged in' do
+    it 'takes you to the marketing page when logged in' do
       sign_in create(:user)
       get :marketing
-      expect(response).to redirect_to dashboard_path
+      expect(response.status).to eq 200
+      expect(response).to render_template :marketing
     end
   end
 
