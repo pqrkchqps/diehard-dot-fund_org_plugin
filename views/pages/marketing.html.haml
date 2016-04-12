@@ -1,3 +1,27 @@
+%head
+  %title= t(:'meta_tags.default_title')
+  %meta{ name: 'description', content: t(:'meta_tags.default_description') }
+
+  %meta{ name: 'twitter:card', content: 'summary'}
+  %meta{ name: 'twitter:creator', content: "@Loomio" }
+  %meta{ name: 'twitter:title', content: t(:'meta_tags.default_title') }
+  %meta{ name: 'twitter:description', content: t(:'meta_tags.default_description') }
+
+  %meta{ property: 'og:title', content: t(:'meta_tags.default_title') }
+  %meta{ property: 'og:description', content: t(:'meta_tags.default_description') }
+  %meta{ property: 'og:type', content: 'website' }
+  %meta{ property: 'og:site_name', content: 'Loomio'}
+  %meta{ property: 'og:image:type', content: 'image/png' }
+  %meta{ property: 'og:image:width', content: '1200' }
+  %meta{ property: 'og:image:height', content: '1200' }
+  %meta{ property: 'og:url', content: request.original_url }
+  %meta{ property: 'fb:app_id', content:ENV['FB_APP_ID_META']}
+
+  %meta{property:'og:locale', content: current_locale}
+  - detectable_locales.each do |locale|
+    %meta{property:'og:locale:alternate', content: locale}
+
+  %link{href: 'https://plus.google.com/116342080294548871960/', rel: 'publisher'}
 %body{class: "#{controller_name} #{action_name}", dir: language_dir(current_locale)}
   = link_to "https://github.com/loomio/loomio", class: "github-fork-link" do
     = image_tag "https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67", alt: "Fork me on GitHub"
