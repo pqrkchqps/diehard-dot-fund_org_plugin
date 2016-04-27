@@ -20,6 +20,7 @@ module Plugins
         LOOMIO_ORG_PAGES.each { |page| plugin.use_page page, "pages##{page}" }
         plugin.use_class 'controllers/pages_controller'
 
+        plugin.use_page :help,          'http://help.loomio.org',                                redirect: true
         plugin.use_page :blog,          'http://blog.loomio.org',                                redirect: true
         plugin.use_page :press,         'http://blog.loomio.org/press-pack',                     redirect: true
         plugin.use_page :"press-pack",  'http://blog.loomio.org/press-pack',                     redirect: true
