@@ -12,7 +12,6 @@ module Plugins
                               marketing
                               pricing
                               privacy
-                              purpose
                               terms_of_service
                               third_parties
                               translation
