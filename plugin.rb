@@ -4,8 +4,6 @@ module Plugins
       setup! :loomio_org_plugin do |plugin|
         plugin.enabled = true
 
-        plugin.use_component :angular_feedback_card, outlet: :after_start_menu
-
         LOOMIO_ORG_PAGES = %w(about
                               browser_not_supported
                               crowdfunding_celebration
