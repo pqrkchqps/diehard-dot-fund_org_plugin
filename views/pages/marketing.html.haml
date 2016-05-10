@@ -22,6 +22,9 @@
     %meta{property:'og:locale:alternate', content: locale}
 
   %link{href: 'https://plus.google.com/116342080294548871960/', rel: 'publisher'}
+
+  = render 'application/google_analytics'
+
 %body{class: "#{controller_name} #{action_name}", dir: language_dir(current_locale)}
   = link_to "https://github.com/loomio/loomio", class: "github-fork-link" do
     = image_tag "https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67", alt: "Fork me on GitHub"
