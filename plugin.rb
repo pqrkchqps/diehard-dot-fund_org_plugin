@@ -32,12 +32,8 @@ module Plugins
         end
 
         plugin.extend_class RootController do
-          def index
-            if current_user_or_visitor.is_logged_in?
-              redirect_to dashboard_path
-            else
-              redirect_to marketing_path
-            end
+          def logged_out_destination
+            marketing_path
           end
         end
       end
