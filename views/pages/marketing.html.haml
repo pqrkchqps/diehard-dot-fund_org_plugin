@@ -1,202 +1,172 @@
-%head
-  %title= t(:'meta_tags.default_title')
-  %meta{ name: 'description', content: t(:'meta_tags.default_description') }
-
-  %meta{ name: 'twitter:card', content: 'summary'}
-  %meta{ name: 'twitter:creator', content: "@Loomio" }
-  %meta{ name: 'twitter:title', content: t(:'meta_tags.default_title') }
-  %meta{ name: 'twitter:description', content: t(:'meta_tags.default_description') }
-
-  %meta{ property: 'og:title', content: t(:'meta_tags.default_title') }
-  %meta{ property: 'og:description', content: t(:'meta_tags.default_description') }
-  %meta{ property: 'og:type', content: 'website' }
-  %meta{ property: 'og:site_name', content: 'Loomio'}
-  %meta{ property: 'og:image:type', content: 'image/png' }
-  %meta{ property: 'og:image:width', content: '1200' }
-  %meta{ property: 'og:image:height', content: '1200' }
-  %meta{ property: 'og:url', content: request.original_url }
-  %meta{ property: 'fb:app_id', content:ENV['FB_APP_ID_META']}
-
-  %meta{property:'og:locale', content: current_locale}
-  - detectable_locales.each do |locale|
-    %meta{property:'og:locale:alternate', content: locale}
-
-  %link{href: 'https://plus.google.com/116342080294548871960/', rel: 'publisher'}
-
-  = render 'application/google_analytics'
-
-%body{class: "#{controller_name} #{action_name}", dir: language_dir(current_locale)}
-  = link_to "https://github.com/loomio/loomio", class: "github-fork-link" do
-    = image_tag "https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67", alt: "Fork me on GitHub"
-  = stylesheet_link_tag "marketing/index"
-
-  .container-fluid
-    %nav.navbar.navbar-default{role: "navigation"}
-      .navbar-content
-        .navbar-header
-          .navbar-brand
-            = link_to_unless_current root_path do
-              = image_tag("logo-orange.png", alt: "Loomio home page")
-        .nav.navbar-nav.navbar-right
-          - if !current_user_or_visitor.is_logged_in?
-            .pull-right= link_to t(:"frontpage.link.log_in"), new_user_session_path(return_to: '/'), class: "btn btn-orange"
-          - else
-            .pull-right= link_to t(:"frontpage.link.dashboard"), dashboard_path, class: "btn btn-orange"
-          .pull-right
-            = link_to t(:"about_loomio"), about_path, class: "btn btn-default hidden-xs"
-            %br
-    %main
-      .row.hero
-        .container.home-flash{style: "margin: 0;padding: 0;width: 100%;"}
-          = render 'application/flash_messages', :flash => flash
-        %section.content
-          =image_tag "globe.png", class: "image"
-          %h1.header= t :"frontpage.hero.header_html"
-          %p.hero-text.description= t :"frontpage.hero.lead_html"
-
-          =link_to start_group_path, class: "btn btn-teal btn-lg hero-text js-not-yet-button", id: "try-it-main" do
-            = t :"frontpage.link.try_loomio"
-            %i.fa.fa-angle-right
-
-      .row.product
-        .content
-          .header
-            %h1= t(:"frontpage.product.header_html")
-          .decision-steps
-            .content
-              #threads.col-md-4.step
-                .step-img
-                  = image_tag "threads.png", {class: "top active"}
-                %h2.active= t(:"frontpage.product.step1.header")
-                %p.active= t(:"frontpage.product.step1.desc")
-              #weaving.col-md-4.step
-                .step-img.hide-background
-                  = image_tag "weaving.png", {class: "top"}
-                %h2= t(:"frontpage.product.step2.header")
-                %p= t(:"frontpage.product.step2.desc")
-              #braid.col-md-4.step
-                .step-img.hide-background
-                  = image_tag "braid.png", {class: "top"}
-                %h2= t(:"frontpage.product.step3.header")
-                %p= t(:"frontpage.product.step3.desc")
-          .col-xs-12#product-carousel.content.product-carousel.carousel.slide{"data-ride" => "carousel"}
-            .carousel-inner
-              .item.active
-                = image_tag "ipad-1.png", alt: "Loomio 1.0 discussion mockup"
-              .item
-                = image_tag "ipad-2.png", alt: "Loomio 1.0 proposal mockup"
-              .item
-                = image_tag "ipad-3.png", alt: "Loomio 1.0 proposal outcome mockup"
-            %a.carousel-control.left-ctrl{href: "#product-carousel", "data-slide" => "prev"}
-              %i.fa.fa-angle-left
-            %a.carousel-control.right-ctrl{href: "#product-carousel", "data-slide" => "next"}
-              %i.fa.fa-angle-right
-            =link_to "https://www.youtube.com/watch?v=ZipyebSY2Lo", class: "video hero-text" do
-              = t(:"frontpage.link.video")
-
-      .row.stories
-        .content
-          %a{href: "https://blog.loomio.org/category/stories", class: "block-link"}
-            %h1 Humans of Loomio
-          %p.hero-text
-            Stories from the amazing people using Loomio to make change in their communities and organizations, all around the world.
-          .cards
-            - @stories.each do |story|
-              .card
-                %a{href: story.url}
-                  %img{src: story.thumb_url}
-                  %h2= raw story.title
-        .clearfix
+%main.marketing__content
+  .wrapper-large.marketing__hero-wrapper
+    %section.marketing__section.grid.grid--medium
+      %div.can-shrink
+        %h2 Making good decisions with your group</nobr> <nobr>shouldn’t be</nobr> <nobr>so hard</nobr>.
+      %div.can-shrink
+        = image_tag('marketing/loomio-old-way.png', class: 'img-can-shrink')
+    %section.marketing__section--margin.grid.grid--medium
+      .marketing__hero-solution-text
+        %h2 With Loomio you can make decisions without a mess of emails or meetings.
+        .marketing__hero-button
+          %a.marketing__button{href: '/start_group', class: 'btn'} Start group
+      .marketing__hero-solution-image
+        = image_tag('marketing/loomio-new-way.png', class: 'img-can-shrink')
+    %section.marketing__section--margin.marketing__hero-button--small-device.ta-center
+      %a.marketing__button{href: '/start_group', class: 'btn'} Start group
+    %section.marketing__section--margin.marketing__loomio-on-devices
+      = image_tag('marketing/loomio-macbook-and-samsung.png', class: 'img-can-shrink')
+    %section.marketing__section--margin.grid
+      .ta-center
         %h2
-          %a{href: "https://blog.loomio.org/category/stories", class: "block-link"}
-            More stories and videos
-            %i.fa.fa-angle-right
-
-      .row.quote
-        .content.rushkoff
-          %blockquote= t(:"frontpage.quote.header.rushkoff_html")
-
-      .row.mobile
-        .content
-          .col-md-6.mobile-header
-            %h1= t(:"frontpage.mobile.lead_html")
-
-      .row.quote
-        .content.sifry
-          %blockquote= t(:"frontpage.quote.header.sifry_html")
-
-      .row
-        = image_tag "team.png", class: "img-responsive full-width", alt: "The Loomio team"
-
-      .row.team
-        %a{href: about_path, class: "block-link"}
-          .content
-            %h1= t(:"frontpage.team.header")
-            %p.hero-text= t(:"frontpage.team.desc")
-            %h2
-              = t(:"frontpage.link.more")
-              %i.fa.fa-angle-right
-
-      .row.ideals
-        .content.first
-          .row
-            .col-xs-6
-              = image_tag "community.png"
-              %h2= t(:"frontpage.ideals.community.header")
-              %p= t(:"frontpage.ideals.community.desc")
-            .col-xs-6
-              = image_tag "indi.png"
-              %h2= t(:"frontpage.ideals.independent.header")
-              %p= t(:"frontpage.ideals.independent.desc")
-      .row.ideals
-        .content
-          .row
-            .col-xs-6
-              = image_tag "open.png"
-              %h2= t(:"frontpage.ideals.open.header")
-              %p.open= t(:"frontpage.ideals.open.desc")
-            .col-xs-6
-              = image_tag "gift.png"
-              %h2= t(:"frontpage.ideals.gift.header")
-              %p.gift= t(:"frontpage.ideals.gift.desc")
-
-
-      .row.media
-        .content
-          %ul
-            %li#ted
-              = link_to image_tag("ted.png"), "https://www.youtube.com/watch?v=4vCL4I19o9U", alt: "Ted", target: "blank"
-            %li#guardian
-              = link_to image_tag("fast.png"), "http://www.fastcoexist.com/3029132/fund-this/an-occupy-inspired-app-that-helps-groups-make-actual-group-decisions", alt: "Fast Company", target: "blank"
-            %li#cnn
-              = link_to image_tag("wired.png"), "http://www.wired.com/2014/04/loomio/", alt: "WIRED", target: "blank"
-            %li#gigaom
-              = link_to image_tag("gigaom.png"), "http://gigaom.com/2014/03/13/meet-loomio-the-small-scale-decision-making-platform-with-the-biggest-ambitions/", alt: "Gigaom", target: "blank"
-            %li#sharable
-              = link_to image_tag("sharable.png"), "http://www.shareable.net/blog/loomio-the-occupy-inspired-app-for-consensus-decision-making", alt: "Sharable", target: "blank"
-            %li#boing
-              = link_to image_tag("boing.png"), "http://boingboing.net/2014/03/19/loomio-democratic-decision-ma.html", alt: "Boing Boing", target: "blank"
-
-    %section.row.footer{role: "contentinfo"}
-      .content
-        %ul
-          %li
-            %a{href: "https://twitter.com/Loomio"}
-              %i.fa.fa-twitter
-          %li
-            %a{href: "https://www.facebook.com/Loomio"}
-              %i.fa.fa-facebook
-          %li= link_to t(:"frontpage.link.blog"), blog_path, class: "blog", target: :_blank
-          %li= link_to t(:"frontpage.link.contact"), contact_path, class: "contact", target: :_blank
-
-          %li= link_to t("footer.pricing"), pricing_path, target: :_blank
-          %li= link_to t(:"frontpage.link.public_groups"), explore_path, target: :_blank
-          %li= link_to t(:"frontpage.link.terms"), terms_of_service_path, target: :_blank
-          %li= link_to t(:"frontpage.link.privacy"), privacy_path, target: :_blank
-          %li= link_to t(:"frontpage.link.press"), "http://blog.loomio.org/press-pack", class: "press", target: :_blank
-          %li.enspiral
-            %a{href: "http://www.enspiral.com"}
-              = image_tag "enspiral.png", alt: "Enspiral"
-
-
-  = javascript_include_tag "marketing"
+          Loomio is a place for your group to
+          %strong make decisions together.
+  .wrapper.marketing__loomio-process
+    %section.marketing__section--margin.grid.grid--medium
+      .marketing__loomio-process-text
+        %h3 Gather
+        %p Bring together the right people and the right information. Accessible, easy to use, customisable, with fine-grained options for privacy and security.
+      .marketing__loomio-process-image
+        = image_tag('marketing/gather.png', class: 'img-can-shrink')
+    %section.marketing__section--margin.grid.grid--medium
+      .marketing__loomio-process-text
+        %h3 Discuss
+        %p Have clear, on-topic conversations. Stay on track, surface the right information, and filter the noise. It’s a dedicated space for constructive collaboration.
+      .marketing__loomio-process-image
+        = image_tag('marketing/discuss.png', class: 'img-can-shrink')
+    %section.marketing__section--margin.grid.grid--medium
+      .marketing__loomio-process-text
+        %h3 Propose
+        %p Visual summaries make it easy to quickly understand where everyone stands, and why. If you agree, find out fast. Or hone directly in on the crux of the issue and start building shared understanding.
+      .marketing__loomio-process-image
+        = image_tag('marketing/propose.png', class: 'img-can-shrink')
+    %section.marketing__section--margin.grid.grid--medium
+      .marketing__loomio-process-text
+        %h3 Decide and Act
+        %p Achieve a clear outcome for every proposal, within the timeframe you set. Everyone gets notified of the results, so you can move forward and take action together.
+      .marketing__loomio-process-image
+        = image_tag('marketing/act.png', class: 'img-can-shrink')
+    %section.marketing__section--margin.ta-center
+      %div
+        %h2 Try it for free
+        %a.marketing__button{href: '/start_group', class: 'btn'} Start group
+    %hr.marketing__rule
+    %section.marketing__section--margin
+      %h3.ta-center
+        Fast, inclusive, and effective can be your new normal.
+      .marketing__case-study.grid.grid--medium
+        .marketing__case-study-image.column--light
+          = image_tag('marketing/vica-rogers.png')
+        .column--heavy
+          %h4 Productivity at meetings, and in between
+          %i “We were communicating between meetings through email, but very often we weren’t actually coming to a decision. On Loomio, we’re able to have a discussion and make a decision. And if you’ve got a lot of things to discuss in a meeting, you can say, ‘We can decide this on Loomio instead’. It’s made face-to-face meetings more efficient.”
+          %p &mdash; Vica Rogers
+          %p
+            %a{href: 'http://blog.loomio.org/2016/03/07/druk/', target: '_blank'} Read more about how a community group in the UK keeps working between meetings, to create a more democratic society...
+      .marketing__case-study.grid.grid--medium
+        .marketing__case-study-image.column--light
+          = image_tag('marketing/jacqui-graham.png', class: 'img-can-shrink')
+        .column--heavy
+          %h4 Increase staff engagement and satisfaction
+          %i “Loomio fundamentally changes the satisfaction levels and engagement levels of staff. It seems to be magical and naturally supports the evolution of the organisation, and is actually being generated by the people themselves. What more can you ask for as a chief executive?”
+          %p &mdash; Jacqui Graham
+          %p
+            %a{href: 'http://blog.loomio.org/2014/04/07/jacqui-graham-meaningful-engagement-in-a-large-organisation/', target: '_blank'} Read more about how a large New Zealand NGO used Loomio to effectively engage staff in decision making...
+      .marketing__case-study.grid.grid--medium
+        .marketing__case-study-image.column--light
+          = image_tag('marketing/kevin-davies.png', class: 'img-can-shrink')
+        .column--heavy
+          %h4 Evolve citizen and stakeholder consultation
+          %i “The participants were talking to each other as well as to us. They used Loomio to tell us what issues they had experienced, and what they wanted the Welsh Government to do about it…. Using Loomio to augment our committee sessions enabled us to improve satisfaction and effectiveness of the engagement process as a whole.”
+          %p &mdash; Kevin Davies
+          %p
+            %a{href: 'http://blog.loomio.org/2016/05/16/national_assembly_wales/', target: '_blank'} Read more about how the National Assembly for Wales used Loomio to consult with service users and providers...
+      .marketing__case-study.grid.grid--medium
+        .marketing__case-study-image.column--light
+          = image_tag('marketing/francesca-pick.png', class: 'img-can-shrink')
+        .column--heavy
+          %h4 Globally scale a collaborative community
+          %i “You need to be able to create trust. People want to understand what’s going on. There’s a need for documentation: being able to show this decision was made, it was agreed by everyone. And it’s great for new people that join to be able to see what has been discussed already. It’s really critical to become more of a learning organisation.”
+          %p &mdash; Francesca Pick
+          %p
+            %a{href: 'http://blog.loomio.org/2016/01/21/ouishare/', target: '_blank'} Read more about how OuiShare, a large social movement spanning countries, uses Loomio to operate transparently and collectively….
+      .marketing__case-study.grid.grid--medium
+        .marketing__case-study-image.column--light
+          = image_tag('marketing/tony-carne.png', class: 'img-can-shrink')
+        .column--heavy
+          %h4 Remote collaboration for distributed teams
+          %p
+            %i “When you knock off at the end of the day the conversation continues through the different time zones, meaning you get closer to a decision even as you sleep. That speeds everything up and increases the accuracy of getting the decision right the first time. In the startup world, that combination is gold.”
+          %p &mdash; Tony Carne
+          %p
+            %a{href: 'http://blog.loomio.org/2014/02/28/organising-adventure-across-six-continents/', target: '_blank'} Read more about how a business with staff from Australia to Vietnam to Canada uses Loomio to collaborate as a team…
+      %hr.marketing__rule
+      %section.marketing__section--margin.ta-center
+        %h3 Every feature of Loomio helps your group discuss, decide, and move forward. It’s different from polling, surveys, or social networking.
+        .marketing__features.grid.grid--medium
+          .marketing__feature
+            %h4.marketing__feature-heading Choose who needs to decide what.
+            %p The process of getting onto and using Loomio helps you clarify how decision making happens in your organisation. Groups can be public or private, with subgroups with fine-grained privacy controls.
+          .marketing__feature
+            %h4.marketing__feature-heading Do better than majority rules.
+            %p Loomio uses a simple decision-making framework designed for constructive deliberation. Don’t settle for conflict - work together to find the best solution.
+          .marketing__feature
+            %h4.marketing__feature-heading Iterate proposals to evolve your thinking.
+            %p Making decisions together can be powerful, even when an initial proposal doesn’t gain consensus. Work through disagreements to evolve and synthesise new solutions.
+        .marketing__features.grid.grid--medium
+          .marketing__feature
+            %h4.marketing__feature-heading Deadlines drive momentum.
+            %p Loomio proposals are time-bound to ensure your group can move ahead without stalling. Everyone knows the time frame to have their input, with automatic reminders before deadlines.
+          .marketing__feature
+            %h4.marketing__feature-heading Be productive without meetings.
+            %p Continue conversations without being in the same room. Get more done online, so you can use valuable meeting time for what needs to happen face to face.
+          .marketing__feature
+            %h4.marketing__feature-heading Notifications keep you informed.
+            %p Customisable notifications mean everyone gets the information they need (and not the information they don’t).
+        .marketing__features.grid.grid--medium
+          .marketing__feature
+            %h4.marketing__feature-heading Automatic decision archive.
+            %p With Loomio, meeting notes write themselves. You’ll have a searchable archive of every decision, recording who was involved and the key points, and the final outcome.
+          .marketing__feature
+            %h4.marketing__feature-heading Participate by email or mobile.
+            %p Loomio works where you work. If you prefer sticking to your email inbox, you can participate that way. And you can access the app on all kinds of devices.
+          .marketing__feature
+            %h4.marketing__feature-heading Accessible and Multi-Lingual.
+            %p Loomio is available in more than 30 languages, and has automatic in-line translation. It’s designed with accessibility in mind, and works great with assistive technology like screen readers.
+      %hr.marketing__rule
+      %section.marketing__section--margin.ta-center
+        .marketing__press.grid.grid--medium
+          %a.marketing__press-testimonial{href: 'http://www.fastcoexist.com/3029132/fund-this/an-occupy-inspired-app-that-helps-groups-make-actual-group-decisions', target: '_blank'}
+            .marketing__press-logo
+              = image_tag('marketing/fast-company-logo.png')
+            %i "The beauty of Loomio is in it's simplicity. It does exactly what it needs to do and no more."
+            %p.marketing__press-author &mdash; Jay Cassano, Fast Company
+          %a.marketing__press-testimonial{href: 'http://boingboing.net/2014/03/19/loomio-democratic-decision-ma.html', target: '_blank'}
+            .marketing__press-logo
+              = image_tag('marketing/boing-boing-logo.png')
+            %i "Loomio seems to have a good mix of political savvy, technical knowhow, and design sense."
+            %p.marketing__press-author &mdash; Cory Doctorow, Boing Boing
+          %a.marketing__press-testimonial{href: 'http://www.bbc.co.uk/programmes/b04md5b0', target: '_blank'}
+            .marketing__press-logo
+              = image_tag('marketing/bbc-logo.png')
+            %i "Loomio is set to be the Facebook of the citizen web."
+            %p.marketing__press-author &mdash; Jon Alexander, BBC Radio 4
+      %hr.marketing__rule
+      %section.marketing__section--margin
+        %h3.ta-center About us
+        .marketing__about-us.grid.grid--medium
+          %div
+            %p
+              Loomio is open source software, built by a worker-owned cooperative social enterprise. We are based in Aotearoa New Zealand, and are part of the
+              %span
+                %a{href: 'http://www.enspiral.com/', target: '_blank'} Enspiral network.
+            %p We believe that more groups practicing effective, inclusive decision-making can change organisational dynamics at a global scale. Loomio exists to make it easy for anyone, anywhere, to participate in decisions that affect their lives.
+            %p
+              %a{href: '/about'} Find out more about our team, our story, and our purpose and values….
+          %div
+            = image_tag('marketing/team-april-16.png', class: 'img-can-shrink')
+      %hr.marketing__rule
+      %section.marketing__section--margin.ta-center
+        %div
+          %h3 Try it for free
+          %a.marketing__button{href: '/start_group', class: 'btn'} Start group

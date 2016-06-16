@@ -2,10 +2,7 @@ class PagesController < ApplicationController
   prepend_view_path 'plugins/loomio_org_plugin/views'
   Plugins::LoomioOrg::Plugin::LOOMIO_ORG_PAGES.each { |page| define_method page, ->{} }
 
-  def marketing
-    @stories = BlogStory.order('published_at DESC').limit(4)
-    render layout: false
-  end
+  layout 'pages'
 
   def third_parties
     @parties = [
