@@ -1,35 +1,30 @@
 %header.header
-  .header__content
-    %section.header__section.grid.grid--medium
-      .column--light
-        .header__logo
-          %a{href: '/'}
-            = image_tag('loomio-logo-800.png')
-      .column--heavy.ta-right
-        .header__menu.grid.grid--medium
-          %li.header__item
-            %a{href: 'http://blog.loomio.org', target: '_blank'} Blog
-          %li.header__item.header__resources-dropdown
-            %span Resources
-            %span.header__item-icon
-              %i.fa.fa-chevron-down
-            %ul.header__resources-dropdown-menu
-              %li
-                %a{href: 'http://blog.loomio.org/category/stories', target: '_blank'} Case studies
-              %li
-                %a{href: 'http://help.loomio.org', target: '_blank'} Help
-              %li
-                %a{href: 'http://blog.loomio.org/category/guides', target: '_blank'} Guides & tips
-              %li
-                %a{href: 'https://github.com/loomio/loomio', target: '_blank'} Developers
-              %li
-                %a{href: '/about'} About
-          %li.header__item.header__item--pricing
-            %a{href: '/pricing'} Pricing
-          %li.header__item
-            %a{href: '/contact'} Contact
-          %li.header__item
-            %a{href: '/users/sign_in'} Login
-          %li.header__item.header__item--start-button
-            %a.header__button{href: '/start_group', class: 'btn'}
-              .header__button-text Start group
+  .header__logo
+    %a{href: '/'}
+      = image_tag('loomio-logo-800.png')
+  %ul.header__menu
+    %li.header__item
+      %a{href: 'http://blog.loomio.org', target: '_blank'} Blog
+    %li.header__item.header__resources-dropdown
+      %span Resources
+      %span.header__item-icon
+        %i.fa.fa-chevron-down
+      %ul.header__resources-dropdown-menu
+        %li
+          %a{href: 'http://blog.loomio.org/category/stories', target: '_blank'} Case studies
+        %li
+          %a{href: 'http://help.loomio.org', target: '_blank'} Help
+        %li
+          %a{href: 'http://blog.loomio.org/category/guides', target: '_blank'} Guides & tips
+        %li
+          %a{href: 'https://github.com/loomio/loomio', target: '_blank'} Developers
+        %li
+          %a{href: '/about'} About
+    %li.header__item.header__item--pricing
+      %a{href: '/pricing'} Pricing
+    %li.header__item
+      %a{href: '/contact'} Contact
+    %li.header__item
+      %a{href: '/users/sign_in'} Login
+    %li.header__item.header__item--start-button
+      %a.header__button{href: '/start_group', class: 'btn'} Start group
