@@ -2,171 +2,168 @@
   .wrapper-large.marketing__hero-wrapper
     %section.marketing__section.grid.grid--medium
       %div.can-shrink
-        %h2 Making good decisions with your group</nobr> <nobr>shouldn’t be</nobr> <nobr>so hard</nobr>.
+        %h2= t :'marketing.hero.dilemma_html'
       %div.can-shrink
         = image_tag('marketing/loomio-old-way.png', class: 'img-can-shrink')
     %section.marketing__section--margin.grid.grid--medium
       .marketing__hero-solution-text
-        %h2 With Loomio you can make decisions without a mess of emails or meetings.
+        %h2= t :'marketing.hero.solution'
         .marketing__hero-button
-          %a.marketing__button{href: '/start_group', class: 'btn'} Start group
+          %a.marketing__button{href: '/start_group', class: 'btn'}= t :'marketing.start_group'
       .marketing__hero-solution-image
         = image_tag('marketing/loomio-new-way.png', class: 'img-can-shrink')
     %section.marketing__section--margin.marketing__hero-button--small-device.ta-center
-      %a.marketing__button{href: '/start_group', class: 'btn'} Start group
+      %a.marketing__button{href: '/start_group', class: 'btn'}= t :'marketing.start_group'
     %section.marketing__section--margin.marketing__loomio-on-devices
       = image_tag('marketing/loomio-macbook-and-samsung.png', class: 'img-can-shrink')
     %section.marketing__section--margin.grid
       .ta-center
-        %h2
-          Loomio is a place for your group to
-          %strong make decisions together.
+        %h2= t :'marketing.make_decisions_html'
   .wrapper.marketing__loomio-process
     %section.marketing__section--margin.grid.grid--medium
       .marketing__loomio-process-text
-        %h3 Gather
-        %p Bring together the right people and the right information. Accessible, easy to use, customisable, with fine-grained options for privacy and security.
+        %h3= t :'marketing.gather.heading'
+        %p= t :'marketing.gather.explanation'
       .marketing__loomio-process-image
         = image_tag('marketing/gather.png', class: 'img-can-shrink')
     %section.marketing__section--margin.grid.grid--medium
       .marketing__loomio-process-text
-        %h3 Discuss
-        %p Have clear, on-topic conversations. Stay on track, surface the right information, and filter the noise. It’s a dedicated space for constructive collaboration.
+        %h3= t :'marketing.discuss.heading'
+        %p= t :'marketing.discuss.explanation'
       .marketing__loomio-process-image
         = image_tag('marketing/discuss.png', class: 'img-can-shrink')
     %section.marketing__section--margin.grid.grid--medium
       .marketing__loomio-process-text
-        %h3 Propose
-        %p Visual summaries make it easy to quickly understand where everyone stands, and why. If you agree, find out fast. Or hone directly in on the crux of the issue and start building shared understanding.
+        %h3= t :'marketing.propose.heading'
+        %p= t :'marketing.propose.explanation'
       .marketing__loomio-process-image
         = image_tag('marketing/propose.png', class: 'img-can-shrink')
     %section.marketing__section--margin.grid.grid--medium
       .marketing__loomio-process-text
-        %h3 Decide and Act
-        %p Achieve a clear outcome for every proposal, within the timeframe you set. Everyone gets notified of the results, so you can move forward and take action together.
+        %h3= t :'marketing.decide_act.heading'
+        %p= t :'marketing.decide_act.explanation'
       .marketing__loomio-process-image
         = image_tag('marketing/act.png', class: 'img-can-shrink')
     %section.marketing__section--margin.ta-center
       %div
-        %h2 Try it for free
-        %a.marketing__button{href: '/start_group', class: 'btn'} Start group
+        %h2= t :'marketing.try_it'
+        %a.marketing__button{href: '/start_group', class: 'btn'}= t :'marketing.start_group'
     %hr.marketing__rule
     %section.marketing__section--margin
       %h3.ta-center
-        Fast, inclusive, and effective can be your new normal.
+        = t :'marketing.fast_inclusive_effective'
       .marketing__case-study.grid.grid--medium
         .marketing__case-study-image.column--light
           = image_tag('marketing/vica-rogers.png')
         .column--heavy
-          %h4 Productivity at meetings, and in between
-          %i “We were communicating between meetings through email, but very often we weren’t actually coming to a decision. On Loomio, we’re able to have a discussion and make a decision. And if you’ve got a lot of things to discuss in a meeting, you can say, ‘We can decide this on Loomio instead’. It’s made face-to-face meetings more efficient.”
+          %h4= t :'marketing.debt_resistance_uk.heading'
+          %i.marketing__case-study-quote= t :'marketing.debt_resistance_uk.quote'
           %p &mdash; Vica Rogers
           %p
-            %a{href: 'http://blog.loomio.org/2016/03/07/druk/', target: '_blank'} Read more about how a community group in the UK keeps working between meetings, to create a more democratic society...
+            %a{href: 'http://blog.loomio.org/2016/03/07/druk/', target: '_blank'}= t :'marketing.debt_resistance_uk.link_text'
       .marketing__case-study.grid.grid--medium
         .marketing__case-study-image.column--light
           = image_tag('marketing/jacqui-graham.png', class: 'img-can-shrink')
         .column--heavy
-          %h4 Increase staff engagement and satisfaction
-          %i “Loomio fundamentally changes the satisfaction levels and engagement levels of staff. It seems to be magical and naturally supports the evolution of the organisation, and is actually being generated by the people themselves. What more can you ask for as a chief executive?”
+          %h4= t :'marketing.pathways.heading'
+          %i.marketing__case-study-quote= t :'marketing.pathways.quote'
           %p &mdash; Jacqui Graham
           %p
-            %a{href: 'http://blog.loomio.org/2014/04/07/jacqui-graham-meaningful-engagement-in-a-large-organisation/', target: '_blank'} Read more about how a large New Zealand NGO used Loomio to effectively engage staff in decision making...
+            %a{href: 'http://blog.loomio.org/2014/04/07/jacqui-graham-meaningful-engagement-in-a-large-organisation/', target: '_blank'}= t :'marketing.pathways.link_text'
       .marketing__case-study.grid.grid--medium
         .marketing__case-study-image.column--light
           = image_tag('marketing/kevin-davies.png', class: 'img-can-shrink')
         .column--heavy
-          %h4 Evolve citizen and stakeholder consultation
-          %i “The participants were talking to each other as well as to us. They used Loomio to tell us what issues they had experienced, and what they wanted the Welsh Government to do about it…. Using Loomio to augment our committee sessions enabled us to improve satisfaction and effectiveness of the engagement process as a whole.”
+          %h4= t :'marketing.welsh_government.heading'
+          %i.marketing__case-study-quote= t :'marketing.welsh_government.quote'
           %p &mdash; Kevin Davies
           %p
-            %a{href: 'http://blog.loomio.org/2016/05/16/national_assembly_wales/', target: '_blank'} Read more about how the National Assembly for Wales used Loomio to consult with service users and providers...
+            %a{href: 'http://blog.loomio.org/2016/05/16/national_assembly_wales/', target: '_blank'}= t :'marketing.welsh_government.link_text'
       .marketing__case-study.grid.grid--medium
         .marketing__case-study-image.column--light
           = image_tag('marketing/francesca-pick.png', class: 'img-can-shrink')
         .column--heavy
-          %h4 Globally scale a collaborative community
-          %i “You need to be able to create trust. People want to understand what’s going on. There’s a need for documentation: being able to show this decision was made, it was agreed by everyone. And it’s great for new people that join to be able to see what has been discussed already. It’s really critical to become more of a learning organisation.”
+          %h4= t :'marketing.ouishare.heading'
+          %i.marketing__case-study-quote= t :'marketing.ouishare.quote'
           %p &mdash; Francesca Pick
           %p
-            %a{href: 'http://blog.loomio.org/2016/01/21/ouishare/', target: '_blank'} Read more about how OuiShare, a large social movement spanning countries, uses Loomio to operate transparently and collectively….
+            %a{href: 'http://blog.loomio.org/2016/01/21/ouishare/', target: '_blank'}= t :'marketing.ouishare.link_text'
       .marketing__case-study.grid.grid--medium
         .marketing__case-study-image.column--light
           = image_tag('marketing/tony-carne.png', class: 'img-can-shrink')
         .column--heavy
-          %h4 Remote collaboration for distributed teams
-          %p
-            %i “When you knock off at the end of the day the conversation continues through the different time zones, meaning you get closer to a decision even as you sleep. That speeds everything up and increases the accuracy of getting the decision right the first time. In the startup world, that combination is gold.”
+          %h4= t :'marketing.urban_adventures.heading'
+          %i.marketing__case-study-quote= t :'marketing.urban_adventures.quote'
           %p &mdash; Tony Carne
           %p
-            %a{href: 'http://blog.loomio.org/2014/02/28/organising-adventure-across-six-continents/', target: '_blank'} Read more about how a business with staff from Australia to Vietnam to Canada uses Loomio to collaborate as a team…
+            %a{href: 'http://blog.loomio.org/2014/02/28/organising-adventure-across-six-continents/', target: '_blank'}= t :'marketing.urban_adventures.link_text'
       %hr.marketing__rule
       %section.marketing__section--margin.ta-center
-        %h3 Every feature of Loomio helps your group discuss, decide, and move forward. It’s different from polling, surveys, or social networking.
+        %h3= t :'marketing.features.heading'
         .marketing__features.grid.grid--medium
           .marketing__feature
-            %h4.marketing__feature-heading Choose who needs to decide what.
-            %p The process of getting onto and using Loomio helps you clarify how decision making happens in your organisation. Groups can be public or private, with subgroups with fine-grained privacy controls.
+            %h4.marketing__feature-heading= t :'marketing.features.choose_participants_heading'
+            %p= t :'marketing.features.choose_participants_explanation'
           .marketing__feature
-            %h4.marketing__feature-heading Do better than majority rules.
-            %p Loomio uses a simple decision-making framework designed for constructive deliberation. Don’t settle for conflict - work together to find the best solution.
+            %h4.marketing__feature-heading= t :'marketing.features.deliberation_heading'
+            %p= t :'marketing.features.deliberation_explanation'
           .marketing__feature
-            %h4.marketing__feature-heading Iterate proposals to evolve your thinking.
-            %p Making decisions together can be powerful, even when an initial proposal doesn’t gain consensus. Work through disagreements to evolve and synthesise new solutions.
+            %h4.marketing__feature-heading= t :'marketing.features.iterate_heading'
+            %p= t :'marketing.features.iterate_explanation'
         .marketing__features.grid.grid--medium
           .marketing__feature
-            %h4.marketing__feature-heading Deadlines drive momentum.
-            %p Loomio proposals are time-bound to ensure your group can move ahead without stalling. Everyone knows the time frame to have their input, with automatic reminders before deadlines.
+            %h4.marketing__feature-heading= t :'marketing.features.deadlines_heading'
+            %p= t :'marketing.features.deadlines_explanation'
           .marketing__feature
-            %h4.marketing__feature-heading Be productive without meetings.
-            %p Continue conversations without being in the same room. Get more done online, so you can use valuable meeting time for what needs to happen face to face.
+            %h4.marketing__feature-heading= t :'marketing.features.fewer_meetings_heading'
+            %p= t :'marketing.features.fewer_meetings_explanation'
           .marketing__feature
-            %h4.marketing__feature-heading Notifications keep you informed.
-            %p Customisable notifications mean everyone gets the information they need (and not the information they don’t).
+            %h4.marketing__feature-heading= t :'marketing.features.notifications_heading'
+            %p= t :'marketing.features.notifications_explanation'
         .marketing__features.grid.grid--medium
           .marketing__feature
-            %h4.marketing__feature-heading Automatic decision archive.
-            %p With Loomio, meeting notes write themselves. You’ll have a searchable archive of every decision, recording who was involved and the key points, and the final outcome.
+            %h4.marketing__feature-heading= t :'marketing.features.archive_heading'
+            %p= t :'marketing.features.archive_explanation'
           .marketing__feature
-            %h4.marketing__feature-heading Participate by email or mobile.
-            %p Loomio works where you work. If you prefer sticking to your email inbox, you can participate that way. And you can access the app on all kinds of devices.
+            %h4.marketing__feature-heading= t :'marketing.features.email_or_mobile_heading'
+            %p= t :'marketing.features.email_or_mobile_explanation'
           .marketing__feature
-            %h4.marketing__feature-heading Accessible and Multi-Lingual.
-            %p Loomio is available in more than 30 languages, and has automatic in-line translation. It’s designed with accessibility in mind, and works great with assistive technology like screen readers.
+            %h4.marketing__feature-heading= t :'marketing.features.accessible_heading'
+            %p= t :'marketing.features.accessible_explanation'
       %hr.marketing__rule
       %section.marketing__section--margin.ta-center
         .marketing__press.grid.grid--medium
           %a.marketing__press-testimonial{href: 'http://www.fastcoexist.com/3029132/fund-this/an-occupy-inspired-app-that-helps-groups-make-actual-group-decisions', target: '_blank'}
             .marketing__press-logo
               = image_tag('marketing/fast-company-logo.png')
-            %i "The beauty of Loomio is in it's simplicity. It does exactly what it needs to do and no more."
+            %i.marketing__press-quote= t :'marketing.press.fast_company'
             %p.marketing__press-author &mdash; Jay Cassano, Fast Company
           %a.marketing__press-testimonial{href: 'http://boingboing.net/2014/03/19/loomio-democratic-decision-ma.html', target: '_blank'}
             .marketing__press-logo
               = image_tag('marketing/boing-boing-logo.png')
-            %i "Loomio seems to have a good mix of political savvy, technical knowhow, and design sense."
+            %i.marketing__press-quote= t :'marketing.press.boingboing'
             %p.marketing__press-author &mdash; Cory Doctorow, Boing Boing
           %a.marketing__press-testimonial{href: 'http://www.bbc.co.uk/programmes/b04md5b0', target: '_blank'}
             .marketing__press-logo
               = image_tag('marketing/bbc-logo.png')
-            %i "Loomio is set to be the Facebook of the citizen web."
+            %i.marketing__press-quote= t :'marketing.press.bbc'
             %p.marketing__press-author &mdash; Jon Alexander, BBC Radio 4
       %hr.marketing__rule
       %section.marketing__section--margin
-        %h3.ta-center About us
+        %h3.ta-center= t :'marketing.about_us.heading'
         .marketing__about-us.grid.grid--medium
           %div
             %p
-              Loomio is open source software, built by a worker-owned cooperative social enterprise. We are based in Aotearoa New Zealand, and are part of the
+              = t :'marketing.about_us.first_paragraph'
               %span
-                %a{href: 'http://www.enspiral.com/', target: '_blank'} Enspiral network.
-            %p We believe that more groups practicing effective, inclusive decision-making can change organisational dynamics at a global scale. Loomio exists to make it easy for anyone, anywhere, to participate in decisions that affect their lives.
+                %a{href: 'http://www.enspiral.com/', target: '_blank'} Enspiral Network.
+            %p= t :'marketing.about_us.second_paragraph'
             %p
-              %a{href: '/about'} Find out more about our team, our story, and our purpose and values….
+              %a{href: '/about'}= t :'marketing.about_us.link_text'
           %div
             = image_tag('marketing/team-april-16.png', class: 'img-can-shrink')
       %hr.marketing__rule
       %section.marketing__section--margin.ta-center
         %div
-          %h3 Try it for free
-          %a.marketing__button{href: '/start_group', class: 'btn'} Start group
+          %h3= t :'marketing.try_it'
+          %a.marketing__button{href: '/start_group', class: 'btn'}= t :'marketing.start_group'

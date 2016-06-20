@@ -1,162 +1,163 @@
 %main.about__content
   .wrapper
-    %h1.about__content-header About us
+    %h1.about__content-header= t :'about.heading'
     %section.about__section.grid.grid--medium
       %div
-        %p Loomio is open source software, built by a worker-owned cooperative social enterprise. We are based in Aotearoa New Zealand, and are part of the Enspiral network. 
-
-        %p We believe that more groups practicing effective, inclusive decision-making can change organisational dynamics at a global scale. Loomio exists to make it easy for anyone, anywhere, to participate in decisions that affect their lives.
+        %p
+          = t :'about.introduction.first_paragraph'
+          %span
+            %a{href: 'http://www.enspiral.com/', target: '_blank'} Enspiral Network.
+        %p= t :'about.introduction.second_paragraph'
       .about__video-container
         <iframe width="426" height="239" src="//www.youtube.com/embed/wSj81OxhdBg" frameborder="0" allowfullscreen></iframe>
     %section.about__section
-      %h2 Story
-      %p Loomio began in 2011, when activists from Occupy Wall Street and social entrepreneurs from the Enspiral Network realised they needed to solve the same problem: fast, inclusive, effective decision-making without meetings. In 2012, we formed our cooperative and released a prototype (Loomio Beta). We found that many others around the world needed the same solution.
-
-      %p In 2013, we ran a successful international crowdfunding campaign, enabling us to work on a new version of the software, Loomio 1.0, which was released the following year. In 2015, we raised a round of ethical capital, and are working to bring collaborative decision-making to millions more people around the world.
+      %h2= t :'about.story.heading'
+      %p= t :'about.story.first_paragraph'
+      %p= t :'about.story.second_paragraph'
     %section.about__section
-      %h2 People
-      %p We’re a passionate team with deep expertise in group process facilitation, social change, business entrepreneurship, and open technology development.
+      %h2= t :'about.people.heading'
+      %p= t :'about.people.introduction'
       .grid.grid--medium
         .about__person.grid
           .about__image-container
             = image_tag "people/alanna.png"
           %div
             %strong Alanna Krause
-            %p Co-founder, facilitator, bossless leadership geek, Enspiral Foundation director, cat lover
+            %p= t :'about.people.alanna'
         .about__person.grid
           .about__image-container
             = image_tag "people/babs.png"
           %div
             %strong Babs Lake
-            %p Company Secretary, operations, activist, nature lover
+            %p= t :'about.people.babs'
       .grid.grid--medium
         .about__person.grid
           .about__image-container
             = image_tag "people/ben.png"
           %div
             %strong Ben Knight
-            %p Co-founder and director, community organizer, collective intelligence researcher
+            %p= t :'about.people.ben'
         .about__person.grid
           .about__image-container
             = image_tag "people/hannah.png"
           %div
             %strong Hannah Salmon
-            %p Software developer, user support, illustrator and DIY publisher, creative activist
+            %p= t :'about.people.hannah'
       .grid.grid--medium
         .about__person.grid
           .about__image-container
             = image_tag "people/james.png"
           %div
             %strong James Kiesel
-            %p Senior software developer, open source community coordinator, daring swashbuckler
+            %p= t :'about.people.james'
         .about__person.grid
           .about__image-container
             = image_tag "people/mary.png"
           %div
             %strong Mary O'Keeffe
-            %p Organisational wrangler, collaborator, team coach, pot luck hoster, star gazer
+            %p= t :'about.people.mary'
       .grid.grid--medium
         .about__person.grid
           .about__image-container
             = image_tag "people/matthew.png"
           %div
             %strong Matthew Bartlett
-            %p Looking after customers, numbers, and design
+            %p= t :'about.people.matthew'
         .about__person.grid
           .about__image-container
             = image_tag "people/michael.png"
           %div
             %strong Michael Elwood-Smith
-            %p Director, business and customer development, coordinator, startup coach, motorcyclist
+            %p= t :'about.people.michael'
       .grid.grid--medium
         .about__person.grid
           .about__image-container
             = image_tag "people/mj.png"
           %div
             %strong MJ Kaplan
-            %p Director, US based strategist, dot connector, coach, proud mama
+            %p= t :'about.people.mj'
         .about__person.grid
           .about__image-container
             = image_tag "people/nati.png"
           %div
             %strong Natalia Lombardo
-            %p Translations coordinator, user support, activist
+            %p= t :'about.people.natalia'
       .grid.grid--medium
         .about__person.grid
           .about__image-container
             = image_tag "people/rich.png"
           %div
             %strong Richard Bartlett
-            %p Co-founder and software developer, activist, open source hardware hacker
+            %p= t :'about.people.richard'
         .about__person.grid
           .about__image-container
             = image_tag "people/rob.png"
           %div
             %strong Robert Guthrie
-            %p Senior developer, DevOps, architecture. Thinks up ideas and writes them into software
+            %p= t :'about.people.robert'
       .grid.grid--medium
         .about__person.about__person--last.grid
           .about__image-container
             = image_tag "people/viv.png"
           %div
             %strong Vivien Maidaborn
-            %p Co-founder, Chair of Loomio Board, Executive Director of UNICEF New Zealand
+            %p= t :'about.people.vivien'
     %section.about__section
-      %h2 Advisors
-      %p We’re backed by an Advisory Council with some of the brightest minds in democracy and tech internationally.
+      %h2= t :'about.advisors.heading'
+      %p= t :'about.advisors.introduction'
       .grid.grid--medium
         .about__person.grid
           .about__image-container
             = image_tag "round-sascha.png"
           %div
             %strong Sascha Meinrath
-            %p Founder of X-Lab & Open Technology Institute
+            %p= t :'about.advisors.sascha'
         .about__person.grid
           .about__image-container
             = image_tag "round-katherine.png"
           %div
             %strong Katherine Borsecnik
-            %p Former Senior Vice President, AOL, Vice Chair of Root Capital
+            %p= t :'about.advisors.katherine'
       .grid.grid--medium
         .about__person.grid
           .about__image-container
             = image_tag "round-joi.png"
           %div
             %strong Joi Ito
-            %p Director of MIT Media Lab, Co-founder Creative Commons, Board of Mozilla Foundation
+            %p= t :'about.advisors.joi'
         .about__person.grid
           .about__image-container
             = image_tag "round-rushkoff.png"
           %div
             %strong Douglas Rushkoff
-            %p Bestselling author, CNN commentator, media theorist
+            %p= t :'about.advisors.douglas'
       .grid.grid--medium
         .about__person.about__person--last.grid
           .about__image-container
             = image_tag "round-monahans.png"
           %div
             %strong Matthew & Brian Monahan
-            %p Cofounders of Inflection, Namaste Foundation
+            %p= t :'about.advisors.matthew_and_brian'
     .section.about__section
-      %h2 Purpose & Values
+      %h2= t :'about.purpose_and_values.heading'
       %p
-        %strong The Loomio Co-operative exists to create a world where it’s easy for anyone to participate in decisions that affect them.
-      %p With the right collaborative process, groups generate better ideas, decisions and actions than any individual would by themselves. The Loomio Co-operative aims to break down the barriers to participation in decision-making at every level: in neighbourhoods, community organisations, businesses, social movements, and local and national governance.
+        %strong= t :'about.purpose_and_values.mission_statement'
+      %p= t :'about.purpose_and_values.introduction'
 
-      %strong Co-operative social enterprise 
-      %p Loomio is a social enterprise collectively owned by the people building it. Unlike a traditional profit­ maximising company, revenue is not an end in itself, but a means towards achieving a core social purpose. A worker-owned cooperative structure is a powerful way to live our values of collaboration and collective ownership.
+      %strong= t :'about.purpose_and_values.coop_heading'
+      %p= t :'about.purpose_and_values.coop_body'
 
-      %strong Independent and neutral 
-      %p Loomio is committed to remaining independent so it can provide a neutral place for any group to come together.
+      %strong= t :'about.purpose_and_values.independent_heading'
+      %p= t :'about.purpose_and_values.independent_body'
 
-      %strong Open-source collaboration 
-      %p Loomio aims to develop open-source tools that make collaboration accessible to everyone.
+      %strong= t :'about.purpose_and_values.open_source_heading'
+      %p= t :'about.purpose_and_values.open_source_body'
 
-      %strong Adaptive, reflexive, user-driven 
-      %p Loomio aims to develop tools which are iterative, self-reflexive and adaptive, driven by the collective wisdom of the user community.
+      %strong= t :'about.purpose_and_values.adaptive_heading'
+      %p= t :'about.purpose_and_values.adaptive_body'
 
-      %strong Transparency 
-      %p The Loomio Co-operative will be surrounded by a valued community of users and contributors. This community must be confident that the Loomio Co-operative is doing what it says it is. We are committed to high standards for sharing information.
+      %strong= t :'about.purpose_and_values.transparent_heading'
+      %p= t :'about.purpose_and_values.transparent_body'
 
   %section.about__footer
     .wrapper
