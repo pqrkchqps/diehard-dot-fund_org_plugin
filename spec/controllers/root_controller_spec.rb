@@ -17,7 +17,7 @@ describe RootController, type: :controller do
         group.add_member! user
         sign_in user
         get :index
-        expect(response).to redirect_to group
+        expect(response).to redirect_to group_path(group)
       end
 
       it 'takes you to the dashboard when a member of multiple groups' do
