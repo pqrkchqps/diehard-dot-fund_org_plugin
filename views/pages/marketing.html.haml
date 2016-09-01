@@ -1,17 +1,20 @@
 %main.marketing__content
   .wrapper-large.marketing__hero-wrapper
-    %section.marketing__section.grid.grid--medium
-      %div.can-shrink
-        %h2= t :'marketing.hero.dilemma_html'
-      %div.can-shrink
-        = image_tag('marketing/loomio-old-way.png', class: 'img-can-shrink', alt: t(:"marketing.hero.dilemma_image_alt"))
-    %section.marketing__section--margin.grid.grid--medium
-      .marketing__hero-solution-text
-        %h2= t :'marketing.hero.solution'
-        .marketing__hero-button
-          %a.marketing__button{href: '/start_group', class: 'btn'}= t :'marketing.start_free_group'
-      .marketing__hero-solution-image
-        = image_tag('marketing/loomio-new-way.png', class: 'img-can-shrink', alt: t(:"marketing.hero.solution_image_alt"))
+    .wrapper-large.marketing__hero-wrapper.grid.grid--medium
+      %section.marketing__section
+        .marketing__hero-dilemma-image
+          = image_tag('marketing/loomio-old-way.png', class: 'img-can-shrink', alt: t(:"marketing.hero.dilemma_image_alt"))
+        .marketing__hero-dilemma-text
+          %h2= t :'marketing.hero.dilemma_html'
+      .marketing.marketing__arrow-image
+        = image_tag('marketing/arrow.png', alt: t(:"marketing.hero.dilemma_image_alt"))
+      %section.marketing__section--margin
+        .marketing__hero-solution-image
+          = image_tag('marketing/loomio-new-way.png', class: 'img-can-shrink', alt: t(:"marketing.hero.solution_image_alt"))
+        .marketing__hero-solution-text
+          %h2= t :'marketing.hero.solution'
+          .marketing__hero-button
+            %a.marketing__button{href: '/start_group', class: 'btn'}= t :'marketing.start_free_group'
     %section.marketing__section--margin.marketing__hero-button--small-device.ta-center
       %a.marketing__button{href: '/start_group', class: 'btn'}= t :'marketing.start_free_group'
     %section.marketing__section--margin.marketing__loomio-on-devices

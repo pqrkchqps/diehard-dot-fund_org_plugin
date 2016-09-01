@@ -2,6 +2,8 @@
   .header__logo
     %a{href: '/'}
       = image_tag('logo-orange.png')
+  .header__menu-bars
+    %i.fa.fa-lg.fa-bars
   %ul.header__menu
     %li.header__item
       %a{href: 'http://blog.loomio.org', target: '_blank'}= t :'navigation.blog'
@@ -18,6 +20,8 @@
           %a{href: 'http://blog.loomio.org/category/guides', target: '_blank'}= t :'navigation.guides_and_tips'
         %li
           %a{href: 'https://github.com/loomio/loomio', target: '_blank'}= t :'navigation.developers'
+        %li
+          %a{href: 'http://loomio.coop/', target: '_blank'}= t :'navigation.coop_handbook'
         %li
           %a{href: '/about'}= t :'navigation.about'
     %li.header__item.header__item--pricing
