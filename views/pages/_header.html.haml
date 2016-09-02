@@ -1,17 +1,17 @@
 %header.header
   .header__logo
     %a{href: '/'}
-      = image_tag('logo-orange.png')
+      = image_tag('logo-orange.png', alt: 'Loomio logo')
   .header__menu-bars
     %i.fa.fa-lg.fa-bars
   %ul.header__menu
     %li.header__item
       %a{href: 'http://blog.loomio.org', target: '_blank'}= t :'navigation.blog'
-    %li.header__item.header__resources-dropdown
+    %li.header__item.header__resources-dropdown{aria_label: t(:"navigation.resources_dropdown")}
       %span= t :'navigation.resources'
       %span.header__item-icon
         %i.fa.fa-chevron-down
-      %ul.header__resources-dropdown-menu
+      %ul.header__resources-dropdown-menu{aria_label: t(:"navigation.resources_submenu")}
         %li
           %a{href: 'http://blog.loomio.org/category/stories', target: '_blank'}= t :'navigation.case_studies'
         %li
