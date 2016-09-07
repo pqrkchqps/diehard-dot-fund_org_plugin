@@ -3,40 +3,40 @@
     %section.footer__section.grid
       %ul.footer__list
         %li.footer__item
-          %a{href: '/'}= t :'navigation.home'
+          %a{href: '/', title: t(:"titles.home")}= t :'navigation.home'
         %li.footer__item
-          %a{href: '/users/sign_in'}= t :'navigation.login'
+          %a{href: '/users/sign_in', title: t(:"titles.sign_in")}= t :'navigation.login'
         %li.footer__item
-          %a{href: '/start_group'}= t :'navigation.start_group'
+          %a{href: '/start_group', title: t(:"titles.start_group")}= t :'navigation.start_group'
         %li.footer__item
-          %a{href: '/contact'}= t :'navigation.contact'
+          %a{href: '/contact', title: t(:"titles.contact")}= t :'navigation.contact'
         %li.footer__item
-          %a{href: '/about'}= t :'navigation.about'
+          %a{href: '/about', title: t(:"titles.about_us")}= t :'navigation.about'
         %li.footer__item
-          %a{href: '/pricing', target: '_blank'}= t :'navigation.pricing'
+          %a{href: '/pricing', target: '_blank', title: t(:"titles.new_tab")}= t :'navigation.pricing'
       %ul.footer__list
         %li.footer__item
-          %a{href: @blog_link, target: '_blank'}= t :'navigation.case_studies'
+          %a{href: @blog_link, target: '_blank', title: t(:"titles.new_tab")}= t :'navigation.case_studies'
         %li.footer__item
-          %a{href: @help_link, target: '_blank'}= t :'navigation.help'
+          %a{href: @help_link, target: '_blank', title: t(:"titles.new_tab")}= t :'navigation.help'
         %li.footer__item
-          %a{href: 'http://blog.loomio.org/category/guides', target: '_blank'}= t :'navigation.guides_and_tips'
+          %a{href: 'http://blog.loomio.org/category/guides', target: '_blank', title: t(:"titles.new_tab")}= t :'navigation.guides_and_tips'
         %li.footer__item
-          %a{href: 'https://github.com/loomio/loomio', target: '_blank'}= t :'navigation.developers'
+          %a{href: 'https://github.com/loomio/loomio', target: '_blank', title: t(:"titles.new_tab")}= t :'navigation.developers'
         %li.footer__item
-          %a{href: '/terms_of_service'}= t :'navigation.terms_of_service'
+          %a{href: '/terms_of_service', title: t(:"titles.terms_of_service")}= t :'navigation.terms_of_service'
         %li.footer__item
-          %a{href: '/privacy'}= t :'navigation.privacy'
+          %a{href: '/privacy', title: t(:"titles.privacy")}= t :'navigation.privacy'
       %ul.footer__list
         %li.footer__item
-          %a{href: '/translation'}= t :'navigation.translation'
+          %a{href: '/translation', title: t(:"titles.translation")}= t :'navigation.translation'
         %li.footer__item
-          %a{href: 'http://blog.loomio.org', target: '_blank'}= t :'navigation.blog'
+          %a{href: 'http://blog.loomio.org', target: '_blank', title: t(:"titles.new_tab")}= t :'navigation.blog'
         %li.footer__item
-          %a{href: 'http://eepurl.com/b51x_b', target: '_blank'}= t :'navigation.newsletter'
+          %a{href: 'http://eepurl.com/b51x_b', target: '_blank', title: t(:"titles.new_tab")}= t :'navigation.newsletter'
         %li.footer__item
-          %a{href: 'https://twitter.com/Loomio', target: '_blank'}= t :'navigation.twitter'
+          %a{href: 'https://twitter.com/Loomio', target: '_blank', title: t(:"titles.new_tab")}= t :'navigation.twitter'
         %li.footer__item
-          %a{href: 'https://www.facebook.com/Loomio/', target: '_blank'}= t :'navigation.facebook'
+          %a{href: 'https://www.facebook.com/Loomio/', target: '_blank', title: t(:"titles.new_tab")}= t :'navigation.facebook'
     .footer__trademark-statement.fs-small
       = t :'navigation.trademark_statement'

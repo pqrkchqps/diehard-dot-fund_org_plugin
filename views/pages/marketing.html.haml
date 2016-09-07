@@ -1,22 +1,22 @@
 %main.marketing__content
   .wrapper-large.marketing__hero-wrapper
-    .wrapper-large.marketing__hero-wrapper.grid.grid--medium
+    .wrapper-medium.marketing__hero-wrapper.grid.grid--medium
       %section.marketing__section
         .marketing__hero-dilemma-image
-          = image_tag('marketing/loomio-old-way.png', class: 'img-can-shrink', alt: t(:"marketing.hero.dilemma_image_alt"))
+          = image_tag('marketing/loomio-old-way.png', class: 'img-can-shrink--hero', alt: t(:"marketing.hero.dilemma_image_alt"))
         .marketing__hero-dilemma-text
           %h2= t :'marketing.hero.dilemma_html'
       .marketing.marketing__arrow-image
         = image_tag('marketing/arrow.png', alt: t(:"marketing.hero.arrow_alt"))
       %section.marketing__section--margin
         .marketing__hero-solution-image
-          = image_tag('marketing/loomio-new-way.png', class: 'img-can-shrink', alt: t(:"marketing.hero.solution_image_alt"))
+          = image_tag('marketing/loomio-new-way.png', class: 'img-can-shrink--hero', alt: t(:"marketing.hero.solution_image_alt"))
         .marketing__hero-solution-text
           %h2= t :'marketing.hero.solution'
           .marketing__hero-button
-            %a.marketing__button{href: '/start_group', class: 'btn'}= t :'marketing.start_free_group'
+            %a.marketing__button{href: '/start_group', class: 'btn', title: t(:"titles.start_group")}= t :'marmarketing.start_free_group'
     %section.marketing__section--margin.marketing__hero-button--small-device.ta-center
-      %a.marketing__button{href: '/start_group', class: 'btn'}= t :'marketing.start_free_group'
+      %a.marketing__button{href: '/start_group', class: 'btn', title: t(:"titles.start_group")}= t :'marmarketing.start_free_group'
     %section.marketing__section--margin.marketing__loomio-on-devices
       = image_tag('marketing/loomio-macbook-and-samsung.png', class: 'img-can-shrink', alt: t(:"marketing.macbook_android_image_alt"))
     %section.marketing__section--margin.grid
@@ -50,8 +50,8 @@
     %section.marketing__section--margin.ta-center
       %div
         %h2= t :'marketing.try_it_now'
-        %a.marketing__button{href: '/start_group', class: 'btn'}= t :'marketing.start_free_group'
-    %hr.marketing__rule
+        %a.marketing__button{href: '/start_group', class: 'btn', title: t(:"titles.start_group")}= t :'marketing.start_free_group'
+    %hr.marketing__rule{'aria-hidden': 'true'}
     %section.marketing__section--margin
       %h3.ta-center
         = t :'marketing.fast_inclusive_effective'
@@ -63,7 +63,7 @@
           %i.marketing__case-study-quote= t :'marketing.debt_resistance_uk.quote'
           %p &mdash; Vica Rogers
           %p
-            %a{href: 'http://blog.loomio.org/2016/03/07/druk/', target: '_blank'}= t :'marketing.debt_resistance_uk.link_text'
+            %a{href: 'http://blog.loomio.org/2016/03/07/druk/', target: '_blank', title: t(:"titles.new_tab")}= t :'marketing.debt_resistance_uk.link_text'
       .marketing__case-study.grid.grid--medium
         .marketing__case-study-image.column--light
           = image_tag('marketing/jacqui-graham.png', class: 'img-can-shrink', alt: 'Jacqui Graham')
@@ -72,7 +72,7 @@
           %i.marketing__case-study-quote= t :'marketing.pathways.quote'
           %p &mdash; Jacqui Graham
           %p
-            %a{href: 'http://blog.loomio.org/2014/04/07/jacqui-graham-meaningful-engagement-in-a-large-organisation/', target: '_blank'}= t :'marketing.pathways.link_text'
+            %a{href: 'http://blog.loomio.org/2014/04/07/jacqui-graham-meaningful-engagement-in-a-large-organisation/', target: '_blank', title: t(:"titles.new_tab")}= t :'marketing.pathways.link_text'
       .marketing__case-study.grid.grid--medium
         .marketing__case-study-image.column--light
           = image_tag('marketing/kevin-davies.png', class: 'img-can-shrink', alt: 'Kevin Davies')
@@ -81,7 +81,7 @@
           %i.marketing__case-study-quote= t :'marketing.welsh_government.quote'
           %p &mdash; Kevin Davies
           %p
-            %a{href: 'http://blog.loomio.org/2016/05/16/national_assembly_wales/', target: '_blank'}= t :'marketing.welsh_government.link_text'
+            %a{href: 'http://blog.loomio.org/2016/05/16/national_assembly_wales/', target: '_blank', title: t(:"titles.new_tab")}= t :'marketing.welsh_government.link_text'
       .marketing__case-study.grid.grid--medium
         .marketing__case-study-image.column--light
           = image_tag('marketing/francesca-pick.png', class: 'img-can-shrink', alt: 'Francesca Pick')
@@ -90,7 +90,7 @@
           %i.marketing__case-study-quote= t :'marketing.ouishare.quote'
           %p &mdash; Francesca Pick
           %p
-            %a{href: 'http://blog.loomio.org/2016/01/21/ouishare/', target: '_blank'}= t :'marketing.ouishare.link_text'
+            %a{href: 'http://blog.loomio.org/2016/01/21/ouishare/', target: '_blank', title: t(:"titles.new_tab")}= t :'marketing.ouishare.link_text'
       .marketing__case-study.grid.grid--medium
         .marketing__case-study-image.column--light
           = image_tag('marketing/tony-carne.png', class: 'img-can-shrink', alt: 'Tony Carne')
@@ -99,8 +99,8 @@
           %i.marketing__case-study-quote= t :'marketing.urban_adventures.quote'
           %p &mdash; Tony Carne
           %p
-            %a{href: 'http://blog.loomio.org/2014/02/28/organising-adventure-across-six-continents/', target: '_blank'}= t :'marketing.urban_adventures.link_text'
-      %hr.marketing__rule
+            %a{href: 'http://blog.loomio.org/2014/02/28/organising-adventure-across-six-continents/', target: '_blank', title: t(:"titles.new_tab")}= t :'marketing.urban_adventures.link_text'
+      %hr.marketing__rule{'aria-hidden': 'true'}
       %section.marketing__section--margin.ta-center
         %h3= t :'marketing.features.heading'
         .marketing__features.grid.grid--medium
@@ -133,25 +133,25 @@
           .marketing__feature
             %h4.marketing__feature-heading= t :'marketing.features.accessible_heading'
             %p= t :'marketing.features.accessible_explanation'
-      %hr.marketing__rule
+      %hr.marketing__rule{'aria-hidden': 'true'}
       %section.marketing__section--margin.ta-center
         .marketing__press.grid.grid--medium
-          %a.marketing__press-testimonial{href: 'http://www.fastcoexist.com/3029132/fund-this/an-occupy-inspired-app-that-helps-groups-make-actual-group-decisions', target: '_blank'}
+          %a.marketing__press-testimonial{href: 'http://www.fastcoexist.com/3029132/fund-this/an-occupy-inspired-app-that-helps-groups-make-actual-group-decisions', target: '_blank', title: t(:"titles.new_tab")}
             .marketing__press-logo
               = image_tag('marketing/fast-company-logo.png', alt: 'Fast Company logo')
             %i.marketing__press-quote= t :'marketing.press.fast_company'
             %p.marketing__press-author &mdash; Jay Cassano, Fast Company
-          %a.marketing__press-testimonial{href: 'http://boingboing.net/2014/03/19/loomio-democratic-decision-ma.html', target: '_blank'}
+          %a.marketing__press-testimonial{href: 'http://boingboing.net/2014/03/19/loomio-democratic-decision-ma.html', target: '_blank', title: t(:"titles.new_tab")}
             .marketing__press-logo
               = image_tag('marketing/boing-boing-logo.png', alt: 'Boing Boing logo')
             %i.marketing__press-quote= t :'marketing.press.boingboing'
             %p.marketing__press-author &mdash; Cory Doctorow, Boing Boing
-          %a.marketing__press-testimonial{href: 'http://www.bbc.co.uk/programmes/b04md5b0', target: '_blank'}
+          %a.marketing__press-testimonial{href: 'http://www.bbc.co.uk/programmes/b04md5b0', target: '_blank', title: t(:"titles.new_tab")}
             .marketing__press-logo
               = image_tag('marketing/bbc-logo.png', alt: 'BBC logo')
             %i.marketing__press-quote= t :'marketing.press.bbc'
             %p.marketing__press-author &mdash; Jon Alexander, BBC Radio 4
-      %hr.marketing__rule
+      %hr.marketing__rule{'aria-hidden': 'true'}
       %section.marketing__section--margin
         %h3.ta-center= t :'marketing.about_us.heading'
         .marketing__about-us.grid.grid--medium
@@ -159,14 +159,14 @@
             %p
               = t :'marketing.about_us.first_paragraph'
               %span
-                %a{href: 'http://www.enspiral.com/', target: '_blank'} Enspiral Network.
+                %a{href: 'http://www.enspiral.com/', target: '_blank', title: t(:"titles.new_tab")} Enspiral Network.
             %p= t :'marketing.about_us.second_paragraph'
             %p
-              %a{href: '/about'}= t :'marketing.about_us.link_text'
+              %a{href: '/about', title: t(:"titles.about_us")}= t :'marketing.about_us.link_text'
           %div
             = image_tag('marketing/team-april-16.png', class: 'img-can-shrink', alt: t(:"marketing.about_us.image_alt"))
-      %hr.marketing__rule
+      %hr.marketing__rule{'aria-hidden': 'true'}
       %section.marketing__section--margin.ta-center
         %div
           %h3= t :'marketing.try_it_now'
-          %a.marketing__button{href: '/start_group', class: 'btn'}= t :'marketing.start_free_group'
+          %a.marketing__button{href: '/start_group', class: 'btn', title: t(:"titles.start_group")}= t :'marketing.start_free_group'

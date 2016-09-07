@@ -6,29 +6,29 @@
     %i.fa.fa-lg.fa-bars
   %ul.header__menu
     %li.header__item
-      %a{href: 'http://blog.loomio.org', target: '_blank'}= t :'navigation.blog'
-    %li.header__item.header__resources-dropdown{aria_label: t(:"navigation.resources_dropdown")}
+      %a{href: 'http://blog.loomio.org', target: '_blank', title: t(:"titles.new_tab")}= t :'navigation.blog'
+    %li.header__item.header__resources-dropdown{'aria-label': t(:"navigation.resources_dropdown"), 'aria-haspopup': 'true', 'aria-expanded': 'false'}
       %span= t :'navigation.resources'
       %span.header__item-icon
         %i.fa.fa-chevron-down
       %ul.header__resources-dropdown-menu{aria_label: t(:"navigation.resources_submenu")}
         %li
-          %a{href: 'http://blog.loomio.org/category/stories', target: '_blank'}= t :'navigation.case_studies'
+          %a{href: 'http://blog.loomio.org/category/stories', target: '_blank', title: t(:"titles.new_tab")}= t :'navigation.case_studies'
         %li
-          %a{href: 'http://help.loomio.org', target: '_blank'}= t :'navigation.help'
+          %a{href: 'http://help.loomio.org', target: '_blank', title: t(:"titles.new_tab")}= t :'navigation.help'
         %li
-          %a{href: 'http://blog.loomio.org/category/guides', target: '_blank'}= t :'navigation.guides_and_tips'
+          %a{href: 'http://blog.loomio.org/category/guides', target: '_blank', title: t(:"titles.new_tab")}= t :'navigation.guides_and_tips'
         %li
-          %a{href: 'https://github.com/loomio/loomio', target: '_blank'}= t :'navigation.developers'
+          %a{href: 'https://github.com/loomio/loomio', target: '_blank', title: t(:"titles.new_tab")}= t :'navigation.developers'
         %li
-          %a{href: 'http://loomio.coop/', target: '_blank'}= t :'navigation.coop_handbook'
+          %a{href: 'http://loomio.coop/', target: '_blank', title: t(:"titles.new_tab")}= t :'navigation.coop_handbook'
         %li
-          %a{href: '/about'}= t :'navigation.about'
+          %a{href: '/about', title: t(:"titles.about_us")}= t :'navigation.about'
     %li.header__item.header__item--pricing
-      %a{href: '/pricing'}= t :'navigation.pricing'
+      %a{href: '/pricing', title: t(:"titles.pricing")}= t :'navigation.pricing'
     %li.header__item
-      %a{href: '/contact'}= t :'navigation.contact'
+      %a{href: '/contact', title: t(:"titles.contact")}= t :'navigation.contact'
     %li.header__item
-      %a{href: '/users/sign_in'}= t :'navigation.login'
+      %a{href: '/users/sign_in', title: t(:"titles.sign_in")}= t :'navigation.login'
     %li.header__item.header__item--start-button
-      %a.header__button{href: '/start_group', class: 'btn'}= t :'navigation.start_group'
+      %a.header__button{href: '/start_group', class: 'btn', title: t(:"titles.start_group")}= t :'navigation.start_group'
