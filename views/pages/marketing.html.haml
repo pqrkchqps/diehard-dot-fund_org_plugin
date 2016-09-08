@@ -1,12 +1,12 @@
 %main.marketing__content
   .wrapper-large.marketing__hero-wrapper
-    .wrapper-medium.marketing__hero-wrapper.grid.grid--medium
+    .marketing__hero-wrapper.grid.grid--medium
       %section.marketing__section
         .marketing__hero-dilemma-image
           = image_tag('marketing/loomio-old-way.png', class: 'img-can-shrink--hero', alt: t(:"marketing.hero.dilemma_image_alt"))
         .marketing__hero-dilemma-text
           %h2= t :'marketing.hero.dilemma_html'
-      .marketing.marketing__arrow-image
+      .marketing.marketing__arrow-image{'aria-hidden': 'true'}
         = image_tag('marketing/arrow.png', alt: t(:"marketing.hero.arrow_alt"))
       %section.marketing__section--margin
         .marketing__hero-solution-image
@@ -14,9 +14,9 @@
         .marketing__hero-solution-text
           %h2= t :'marketing.hero.solution'
           .marketing__hero-button
-            %a.marketing__button{href: '/start_group', class: 'btn', title: t(:"titles.start_group")}= t :'marmarketing.start_free_group'
+            %a.marketing__button{href: '/start_group?utm_source=loomio_org&utm_medium=front_page&utm_campaign=first_button', class: 'btn', title: t(:"titles.start_group")}= t :'marketing.start_free_group'
     %section.marketing__section--margin.marketing__hero-button--small-device.ta-center
-      %a.marketing__button{href: '/start_group', class: 'btn', title: t(:"titles.start_group")}= t :'marmarketing.start_free_group'
+      %a.marketing__button{href: '/start_group?utm_source=loomio_org&utm_medium=front_page&utm_campaign=first_button', class: 'btn', title: t(:"titles.start_group")}= t :'marketing.start_free_group'
     %section.marketing__section--margin.marketing__loomio-on-devices
       = image_tag('marketing/loomio-macbook-and-samsung.png', class: 'img-can-shrink', alt: t(:"marketing.macbook_android_image_alt"))
     %section.marketing__section--margin.grid
@@ -50,7 +50,7 @@
     %section.marketing__section--margin.ta-center
       %div
         %h2= t :'marketing.try_it_now'
-        %a.marketing__button{href: '/start_group', class: 'btn', title: t(:"titles.start_group")}= t :'marketing.start_free_group'
+        %a.marketing__button{href: '/start_group?utm_source=loomio_org&utm_medium=front_page&utm_campaign=try_it_now_middle_button', class: 'btn', title: t(:"titles.start_group")}= t :'marketing.start_free_group'
     %hr.marketing__rule{'aria-hidden': 'true'}
     %section.marketing__section--margin
       %h3.ta-center
@@ -169,4 +169,4 @@
       %section.marketing__section--margin.ta-center
         %div
           %h3= t :'marketing.try_it_now'
-          %a.marketing__button{href: '/start_group', class: 'btn', title: t(:"titles.start_group")}= t :'marketing.start_free_group'
+          %a.marketing__button{href: '/start_group?utm_source=loomio_org&utm_medium=front_page&utm_campaign=try_it_now_bottom_button', class: 'btn', title: t(:"titles.start_group")}= t :'marketing.start_free_group'
