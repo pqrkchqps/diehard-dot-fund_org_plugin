@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   prepend_view_path 'plugins/loomio_org_plugin/views'
   Plugins::LoomioOrg::Plugin::LOOMIO_ORG_PAGES.each { |page| define_method page, ->{} }
 
-  before_filter :set_locale_specific_links
+  before_action :set_locale_specific_links
 
   layout 'pages'
 
