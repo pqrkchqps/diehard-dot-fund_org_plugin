@@ -24,6 +24,7 @@ module Plugins
         plugin.use_page :privacy,          'https://loomio.gitbooks.io/manual/content/en/privacy_policy.html',       redirect: true
         plugin.use_page :terms_of_service, 'https://loomio.gitbooks.io/manual/content/en/terms_of_service.html',     redirect: true
         plugin.use_page :third_parties,    'https://loomio.gitbooks.io/manual/content/en/third_party_services.html', redirect: true
+        plugin.use_page :newsletter,       'http://eepurl.com/b51x_b',                                               redirect: true
 
         plugin.extend_class ApplicationHelper do
           def hosted_by_loomio?
