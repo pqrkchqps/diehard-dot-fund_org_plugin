@@ -33,6 +33,9 @@ module Plugins
         end
 
         plugin.use_page('/', 'pages#marketing')
+
+        plugin.use_static_asset :assets, 'pages/index.scss'
+        plugin.use_static_asset :assets, 'pages/marketing.js.coffee'
       end
     end
   end
