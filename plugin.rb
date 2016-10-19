@@ -36,6 +36,7 @@ module Plugins
 
         plugin.use_static_asset :assets, 'pages/index.scss', standalone: true
         plugin.use_static_asset :assets, 'pages/marketing.coffee', standalone: true
+        plugin.use_static_asset_directory :"assets/pages/images", standalone: true
       end
     end
   end
