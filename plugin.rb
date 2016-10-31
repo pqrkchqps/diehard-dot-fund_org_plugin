@@ -33,6 +33,10 @@ module Plugins
         end
 
         plugin.use_page('/', 'pages#marketing')
+
+        plugin.use_static_asset :assets, 'pages/index.scss', standalone: true
+        plugin.use_static_asset :assets, 'pages/marketing.coffee', standalone: true
+        plugin.use_static_asset_directory :"assets/pages/images", standalone: true
       end
     end
   end
