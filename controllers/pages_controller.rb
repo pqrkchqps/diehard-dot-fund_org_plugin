@@ -9,7 +9,7 @@ class PagesController < ApplicationController
   private
 
   def set_locale_specific_links
-    case best_locale.to_s
+    case I18n.locale.to_s
     when 'es'
       @help_link = 'https://loomio.gitbooks.io/manual/content/es/index.html'
       @blog_link = 'http://blog.loomio.org/category/espanol-castellano/'
