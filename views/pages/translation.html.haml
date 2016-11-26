@@ -25,7 +25,7 @@
 
             - selectable_locales.each_with_index do |locale, index|
               %tr
-                %td= link_to locale_name(locale), root_path(locale: locale)
+                %td= link_to I18n.t(locale.to_sym, scope: :native_language_name), root_path(locale: locale)
                 - coverage = Loomio::I18n::TRANSLATION_COVERAGE[locale]
                 %td
                   -if coverage
@@ -46,7 +46,7 @@
           %table.code
             - Loomio::I18n::TEST_LOCALES.each_with_index do |locale, index|
               %tr
-                %td= link_to locale_name(locale), root_path(locale: locale)
+                %td= link_to I18n.t(locale.to_sym, scope: :native_language_name), root_path(locale: locale)
                 - coverage = Loomio::I18n::TRANSLATION_COVERAGE[locale]
                 %td
                   -if coverage
@@ -74,12 +74,12 @@
 
           %p.code
             - # not quite honest
-            - browser_accepted_locales.each_with_index do |locale,i|
+            - locales_from_browser_detection.each_with_index do |locale,i|
               - if detectable_locales.include?(locale)
                 = link_to locale, root_path(locale: locale), title: t(locale)
               - else
                 = locale
-              = ', ' unless i == browser_accepted_locales.count - 1
+              = ', ' unless i == locales_from_browser_detection.count - 1
 
           %p The current fallback settings for loomio:
           %table.code
@@ -96,6 +96,6 @@
               %tr
                 %td= locale
                 %td= "|"
-                %td= link_to locale_name(locale), root_path(locale: locale)
+                %td= link_to I18n.t(locale.to_sym, scope: :native_language_name), root_path(locale: locale)
                 %td= "|"
                 %td= t(locale)
