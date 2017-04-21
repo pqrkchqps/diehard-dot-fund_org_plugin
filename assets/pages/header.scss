@@ -21,8 +21,6 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 10px;
-  padding-bottom: 10px;
   z-index: 1;
 }
 
@@ -105,7 +103,10 @@
     flex-direction: row;
     -webkit-flex-direction: row;
   }
-  .header__item { padding: 0 10px; }
+  .header__item {
+    padding: 0 10px;
+    line-height: 40px;
+  }
   .header__resources-dropdown-menu {
     position: absolute;
     text-align: left;
