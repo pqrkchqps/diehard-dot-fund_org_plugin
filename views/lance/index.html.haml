@@ -239,18 +239,18 @@
 
 %section
   %h2.txt--center In the media
-  .fp-drop-in.flex.flex--space-between
-    .fp-drop-in__box
+  .media__flex
+    .media__group
       = image_tag 'lance/images/fastcompany.png', class: 'fp-drop-in__image'
       %a{href: "https://www.fastcompany.com/3029132/fund-this/an-occupy-inspired-app-that-helps-groups-make-actual-group-decisions", target: "_blank"}
         The beauty of Loomio is in it's simplicity. It does exactly what it needs to do and no more.
       — Jay Cassano, Fast Company
-    .fp-drop-in__box
+    .media__group
       = image_tag 'lance/images/boingboing.png', class: 'fp-drop-in__image'
       %a{href: "http://boingboing.net/2014/03/19/loomio-democratic-decision-ma.html", target: "_blank"}
         Loomio seems to have a good mix of political savvy, technical knowhow, and design sense.
       — Cory Doctorow, Boing Boing
-    .fp-drop-in__box
+    .media__group
       = image_tag 'lance/images/bbc.png', class: 'fp-drop-in__image'
       %a{href: "http://www.bbc.co.uk/programmes/b04md5b0", target: "_blank"}
         Loomio is set to be the Facebook of the citizen web.
@@ -264,7 +264,10 @@
     .duo__text
       %p Loomio is a social enterprise collectively owned by the people building it.
       %p Loomio exists to make it easy for anyone, anywhere, to participate in decisions that affect their lives.
-      %p Our company handbook, Loomio School, About us.
+      %p
+        %a{href: "https://loomio.coop"} Our company handbook
+      %p
+        %a{href: "/about"} About us
     .duo__image
       = image_tag 'lance/images/teamphoto.jpg'
 
