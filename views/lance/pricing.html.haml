@@ -1,0 +1,59 @@
+.wrapper.pricing-table__wrapper
+  %h1= t :"pricing_page.header"
+  .grid.grid--medium
+    .pricing-table__option.pricing-table__option--standard
+      %h2= t :"pricing_page.standard"
+      %p.pricing-table__price
+        = t :"pricing_page.standard_price_html"
+      %p.pricing-table__plan-description= t :"pricing_page.standard_body_html"
+      %p
+        %em= t :"pricing_page.standard_includes_free"
+      %ul
+        %li
+          %i.fa.fa-check
+          = t :"pricing_page.slack_integration_html"
+        %li
+          %i.fa.fa-check
+          = t :"pricing_page.customer_support_html"
+        %li
+          %i.fa.fa-check
+          = t :"pricing_page.analytics_report"
+        %li
+          %i.fa.fa-check
+          = t :"pricing_page.data_export"
+    .pricing-table__option.pricing-table__option--gift
+      %h2= t :"pricing_page.gift"
+      %p.pricing-table__price
+        = t :"pricing_page.gift_price_html"
+      %p.pricing-table__plan-description= t :"pricing_page.gift_body"
+      %ul
+        %li
+          %i.fa.fa-check
+          = t :"pricing_page.unlimited_members"
+        %li
+          %i.fa.fa-check
+          = t :"pricing_page.unlimited_decisions"
+        %li
+          %i.fa.fa-check
+          = t :"pricing_page.coming_facebook"
+    .pricing-table__option.pricing-table__option--plus
+      %h2= t :"pricing_page.plus"
+      %p.pricing-table__price
+        = t :"pricing_page.plus_price_html"
+      %p.pricing-table__plan-description= t :"pricing_page.pro_body_html"
+      %p
+        %em= t :"pricing_page.plus_includes_standard"
+      %ul
+        %li
+          %i.fa.fa-check
+          = t :"pricing_page.multiple_groups"
+        %li
+          %i.fa.fa-check
+          = t :"pricing_page.premium_support"
+        %li
+          %i.fa.fa-check
+          = t :"pricing_page.ldap_coming_soon"
+  %p.pricing-table__contact-us
+    = t :"pricing_page.contact_us_html"
+  %p.pricing-table__get-started
+    %a.marketing__button{href: 'https://www.loomio.org/start_group', class: 'btn'} Start group

@@ -11,8 +11,8 @@ module Plugins
                               pricing
                               translation
                               wallets)
-        LOOMIO_ORG_PAGES.each { |page| plugin.use_page page, "pages##{page}" }
-        plugin.use_class 'controllers/pages_controller'
+        LOOMIO_ORG_PAGES.each { |page| plugin.use_page page, "lance##{page}" }
+        plugin.use_class 'controllers/lance_controller'
 
         plugin.use_page :help,             'http://help.loomio.org',                                                 redirect: true
         plugin.use_page :blog,             'http://blog.loomio.org',                                                 redirect: true
@@ -32,12 +32,11 @@ module Plugins
           end
         end
 
-        plugin.use_page('/', 'pages#index')
+        plugin.use_page('/', 'lance#index')
 
-        plugin.use_static_asset :assets, 'pages/index.scss', standalone: true
-        plugin.use_static_asset :assets, 'pages/marketing.coffee', standalone: true
-        plugin.use_static_asset :assets, 'pages/static.scss', standalone: true
-        plugin.use_static_asset_directory :"assets/pages/images", standalone: true
+        plugin.use_static_asset :assets, 'lance/index.scss', standalone: true
+        plugin.use_static_asset :assets, 'lance/ahoy.coffee', standalone: true
+        plugin.use_static_asset_directory :"assets/lance/images", standalone: true
       end
     end
   end

@@ -1,10 +1,8 @@
-class PagesController < ApplicationController
+class LanceController < ApplicationController
   prepend_view_path 'plugins/loomio_org_plugin/views'
   Plugins::LoomioOrg::Plugin::LOOMIO_ORG_PAGES.each { |page| define_method page, ->{} }
 
   before_action :set_locale_specific_links
-
-  layout false, only: [:index, :pricing]
 
   private
 
