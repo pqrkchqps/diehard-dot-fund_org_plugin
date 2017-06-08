@@ -1,0 +1,24 @@
+.break {
+  display: block;
+  border: 0;
+  padding: 0;
+  height: 10px;
+  background-image: url("images/lance/line1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 2em;
+  margin-top: 4em;
+  opacity: .7;
+}
+
+.break__long-orange {
+  @extend .break;
+  background-image: url("images/lance/long-line-orange.png");
+}
+
+.break__long-blue {
+  @extend .break;
+  margin: 2em 20%;
+  opacity: .5;
+  background-image: url("images/lance/long-line-blue.png");
+}

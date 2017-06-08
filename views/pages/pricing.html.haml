@@ -1,59 +1,33 @@
-.wrapper.pricing-table__wrapper
-  %h1= t :"pricing_page.header"
-  .grid.grid--medium
-    .pricing-table__option.pricing-table__option--standard
-      %h2= t :"pricing_page.standard"
-      %p.pricing-table__price
-        = t :"pricing_page.standard_price_html"
-      %p.pricing-table__plan-description= t :"pricing_page.standard_body_html"
-      %p
-        %em= t :"pricing_page.standard_includes_free"
-      %ul
-        %li
-          %i.fa.fa-check
-          = t :"pricing_page.slack_integration_html"
-        %li
-          %i.fa.fa-check
-          = t :"pricing_page.custom_subdomain_html"
-    .pricing-table__option.pricing-table__option--gift
-      %h2= t :"pricing_page.gift"
-      %p.pricing-table__price
-        = t :"pricing_page.gift_price_html"
-      %p.pricing-table__plan-description= t :"pricing_page.gift_body"
-      %ul
-        %li
-          %i.fa.fa-check
-          = t :"pricing_page.one_group"
-        %li
-          %i.fa.fa-check
-          = t :"pricing_page.unlimited_members"
-        %li
-          %i.fa.fa-check
-          = t :"pricing_page.unlimited_decisions"
-    .pricing-table__option.pricing-table__option--plus
-      %h2= t :"pricing_page.plus"
-      %p.pricing-table__price
-        = t :"pricing_page.plus_price_html"
-      %p.pricing-table__plan-description= t :"pricing_page.pro_body_html"
-      %p
-        %em= t :"pricing_page.plus_includes_standard"
-      %ul
-        %li
-          %i.fa.fa-check
-          = t :"pricing_page.multiple_groups"
-        %li
-          %i.fa.fa-check
-          = t :"pricing_page.premium_support"
-        %li
-          %i.fa.fa-check
-          = t :"pricing_page.help_with_setup"
-        %li
-          %i.fa.fa-check
-          = t :"pricing_page.analytics_reports"
-        %li
-          %i.fa.fa-check
-          = t :"pricing_page.data_export"
-  %p.pricing-table__contact-us
-    = t :"pricing_page.contact_us_html"
-  %p.pricing-table__get-started
-    %a.marketing__button{href: 'https://www.loomio.org/start_group', class: 'btn'} Start group
+!!!
+%html
+  %head
+    %meta{charset: "UTF-8"}
+    = stylesheet_link_tag 'pages/static'
+    %link{rel: "stylesheet", href:"https://fonts.googleapis.com/icon?family=Material+Icons"}
+
+  %body
+    %header
+      %nav.nav
+        = image_tag 'pages/images/logo.png', class: 'nav__logo'
+        .nav__spacer
+        %a.nav__link{href: "/users/sign_up"} login
+        %a.nav__link{href: "/users/sign_in"} signup
+
+    %section.full-screen
+      .liner
+        .banner.p2.txt--center
+          %h1 Simple pricing
+        .grd
+          .grd-row
+            .grd-row-col-3-6
+              = image_tag 'pages/images/happy-loomio-users.png'
+            .grd-row-col-3-6
+              %h3 Upgrade your conversation
+              %p
+                Drop a Loomio decision into your Email, Slack or Facebook conversation and see how things improve.
+              %h3 Save everyone time
+              %p
+                Participation is quick and easy, no signup or passwords required.
+              %h3 Make better decisions
+              %p
+                Find the best solution and build confidence in the group.

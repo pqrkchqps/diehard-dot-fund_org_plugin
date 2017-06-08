@@ -4,7 +4,7 @@ class PagesController < ApplicationController
 
   before_action :set_locale_specific_links
 
-  layout 'pages'
+  layout false, only: [:index, :pricing]
 
   private
 
