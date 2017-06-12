@@ -1,4 +1,4 @@
-class LanceController < ApplicationController
+class PagesController < ApplicationController
   prepend_view_path 'plugins/loomio_org_plugin/views'
   Plugins::LoomioOrg::Plugin::LOOMIO_ORG_PAGES.each { |page| define_method page, ->{} }
 
