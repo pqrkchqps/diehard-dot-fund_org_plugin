@@ -32,7 +32,7 @@ module Plugins
           end
         end
 
-        plugin.use_page('/', 'lance#index')
+        plugin.use_page('/', 'pages#index')
 
         plugin.use_static_asset :assets, 'lance/index.scss', standalone: true
         plugin.use_static_asset :assets, 'lance/ahoy.coffee', standalone: true
