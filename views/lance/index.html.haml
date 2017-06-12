@@ -10,14 +10,12 @@
       %p Loomio saves time, gives clear outcomes, and keeps everything in one place.
 
       %p
-        %a.btn.btn--primary.h3{href: "/g/new"} Start a group
-        %a.btn.btn--accent.h3{href: "/p/new"} Make a decision
+        %a.btn.btn--primary.h3.hero__start-group{href: "/g/new"} Start a group
+        %a.btn.btn--accent.h3.hero__make-decision{href: "/p/new"} Make a decision
       .duo__cta.duo__cta--intro
         .duo__cta--first
         .duo__cta--second
   %hr.break__long-orange
-
-
 
 %section.helps
   %header
@@ -80,8 +78,8 @@
       %p Proposals highlight agreement, and can surface misunderstandings or issues that need to be resolved.
 
       .duo__cta
-        %a.btn.btn--primary{href: "/p/new/proposal"} Start a proposal
-        %a.btn.btn--accent{href: "/p/example/proposal"} Try demo
+        %a.btn.btn--primary.tools__proposal-start{href: "/p/new/proposal"} Start a proposal
+        %a.btn.btn--accent.tools__proposal-demo{href: "/p/example/proposal"} Try demo
     .duo__image
       = image_tag 'lance/images/lance/proposal.png', class: 'feature__image'
 
@@ -96,8 +94,8 @@
         finds when everyone can meet. It works across organisations and automatically converts time zones.
 
       .duo__cta
-        %a.btn.btn--primary{href: "/p/new/meeting"} Start a time poll
-        %a.btn.btn--accent{href: "/p/example/meeting"} Try demo
+        %a.btn.btn--primary.tools__meeting-start{href: "/p/new/meeting"} Start a time poll
+        %a.btn.btn--accent.tools__meeting-demo{href: "/p/example/meeting"} Try demo
 
     .duo__image
       = image_tag 'lance/images/lance/time-poll.png', class: 'feature__image'
@@ -115,8 +113,8 @@
         %strong Polling
 
       .duo__cta
-        %a.btn.btn--primary{href: "/p/new/dot_vote"} Start a dot vote
-        %a.btn.btn--accent{href: "/p/example/dot_vote"} Try demo
+        %a.btn.btn--primary.tools__dot-vote-start{href: "/p/new/dot_vote"} Start a dot vote
+        %a.btn.btn--accent.tools__dot-vote-demo{href: "/p/example/dot_vote"} Try demo
 
     .duo__image
       = image_tag 'lance/images/lance/prioritise.png', class: 'feature__image'
@@ -133,8 +131,8 @@
         makes participation clear and saves you chasing people up.
 
       .duo__cta
-        %a.btn.btn--primary{href: "/p/new/count"} Start a check
-        %a.btn.btn--accent{href: "/p/example/count"} Try demo
+        %a.btn.btn--primary.tools__count-start{href: "/p/new/count"} Start a check
+        %a.btn.btn--accent.tools__count-demo{href: "/p/example/count"} Try demo
 
     .duo__image
       = image_tag 'lance/images/lance/check.png', class: 'feature__image'
@@ -152,7 +150,7 @@
       %p It's a secure and searchable archive of your discussions, decisions, and files.
 
       .duo__cta
-        %a.btn.btn--primary{href: "/p/new/count"} Start a group
+        %a.btn.btn--primary.tools__group-start{href: "/p/new/count"} Start a group
 
     .duo__image
       = image_tag 'lance/images/lance/group.png', class: 'feature__image'
@@ -230,7 +228,7 @@
         %h4 Open source
         %p
           Check out our code on
-          %a{href: "https://github.com/loomio/loomio"} Github
+          %a.features__github-link{href: "https://github.com/loomio/loomio"} Github
       .grd-row-col-2-6--md.p1
         %h4 We respect your privacy
         %p We will never sell you data to third parties, or put advertising into Loomio.
@@ -242,32 +240,32 @@
   .media__flex
     .media__group
       = image_tag 'lance/images/fastcompany.png', class: 'fp-drop-in__image'
-      %a{href: "https://www.fastcompany.com/3029132/fund-this/an-occupy-inspired-app-that-helps-groups-make-actual-group-decisions", target: "_blank"}
+      %a.media__fast-company-link{href: "https://www.fastcompany.com/3029132/fund-this/an-occupy-inspired-app-that-helps-groups-make-actual-group-decisions", target: "_blank"}
         The beauty of Loomio is in it's simplicity. It does exactly what it needs to do and no more.
       — Jay Cassano, Fast Company
     .media__group
       = image_tag 'lance/images/boingboing.png', class: 'fp-drop-in__image'
-      %a{href: "http://boingboing.net/2014/03/19/loomio-democratic-decision-ma.html", target: "_blank"}
+      %a.media__boing-boing-list{href: "http://boingboing.net/2014/03/19/loomio-democratic-decision-ma.html", target: "_blank"}
         Loomio seems to have a good mix of political savvy, technical knowhow, and design sense.
       — Cory Doctorow, Boing Boing
     .media__group
       = image_tag 'lance/images/bbc.png', class: 'fp-drop-in__image'
-      %a{href: "http://www.bbc.co.uk/programmes/b04md5b0", target: "_blank"}
+      %a.media__bbc-link{href: "http://www.bbc.co.uk/programmes/b04md5b0", target: "_blank"}
         Loomio is set to be the Facebook of the citizen web.
       — Jon Alexander, BBC Radio 4
 
   %hr.break__long-orange
 
-%section.liner.py2
+%section.liner.py2.about
   %h2.txt--center A different kind of company
   .duo
     .duo__text
       %p Loomio is a social enterprise collectively owned by the people building it.
       %p Loomio exists to make it easy for anyone, anywhere, to participate in decisions that affect their lives.
       %p
-        %a{href: "https://loomio.coop"} Our company handbook
+        %a.about__company-handbook-link{href: "https://loomio.coop"} Our company handbook
       %p
-        %a{href: "/about"} About us
+        %a.about__about-us-link{href: "/about"} About us
     .duo__image
       = image_tag 'lance/images/teamphoto.jpg'
 
