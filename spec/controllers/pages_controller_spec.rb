@@ -7,14 +7,14 @@ describe PagesController, type: :controller do
     it 'takes you to the marketing page when logged out' do
       get :marketing
       expect(response.status).to eq 200
-      expect(response).to render_template :marketing
+      expect(response).to render_template :index
     end
 
     it 'takes you to the marketing page when logged in' do
       sign_in create(:user)
       get :marketing
       expect(response.status).to eq 200
-      expect(response).to render_template :marketing
+      expect(response).to render_template :index
     end
   end
 

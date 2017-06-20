@@ -10,10 +10,9 @@
       %p=t(:'marketing2.loomio_is_the_answer')
 
       %p
-        %a.btn.btn--primary.h3.hero__start-group{href: "/g/new"}
-          = t(:'navigation.start_a_group')
-        %a.btn.btn--accent.h3.hero__make-decision{href: "/p/new"}
-          = t(:'navigation.make_a_decision')
+        %a.btn.btn--primary.h3.hero__start-group{href: "/g/new"}= t(:'marketing2.start_a_group')
+
+        %a.btn.btn--accent.h3.hero__make-decision{href: "/p/new"}= t(:'marketing2.make_a_decision')
       .duo__cta.duo__cta--intro
         .duo__cta--first
         .duo__cta--second
@@ -45,22 +44,16 @@
 
 %section.quotes
   .quotes__wrapper
-    .quotes__quote
-      = t(:'marketing2.ben_quote')
-    .quotes__author
-      = t(:'marketing2.ben_attribution')
+    .quotes__quote= t(:'marketing2.ben_quote')
+    .quotes__author= t(:'marketing2.ben_attribution')
 
   .quotes__wrapper
-    .quotes__quote
-      = t(:'marketing2.teddy_quote')
-    .quotes__author
-      = t(:'marketing2.teddy_attribution')
+    .quotes__quote= t(:'marketing2.teddy_quote')
+    .quotes__author= t(:'marketing2.teddy_attribution')
 
   .quotes__wrapper
-    .quotes__quote
-      = t(:'marketing2.tom_quote')
-    .quotes__author
-      = t(:'marketing2.tom_attribution')
+    .quotes__quote= t(:'marketing2.tom_quote')
+    .quotes__author= t(:'marketing2.tom_attribution')
   %hr.break__long-orange
 
 %section.tools#features
@@ -71,7 +64,7 @@
     .duo__text
       %h3= t(:'marketing2.reach_clear_outcomes')
 
-      %p= t(:'marketing2.proposals_bring_conclusion')
+      %p= t(:'marketing2.proposals_bring_conclusion_html')
       %p= t(:'marketing2.hear_from_everyone')
       %p= t(:'marketing2.proposals_highlight_agreement')
 
@@ -87,7 +80,7 @@
     .duo__text
       %h3= t(:'marketing2.simple_scheduling')
 
-      %p= t(:'marketing2.time_poll_finds_when')
+      %p= t(:'marketing2.time_poll_finds_when_html')
 
       .duo__cta
         %a.btn.btn--primary.tools__meeting-start{href: "/p/new/meeting"}= t(:'marketing2.start_a_time_poll')
@@ -101,7 +94,7 @@
   .duo
     .duo__text
       %h3= t(:'marketing2.polling_and_prioritising')
-      %p= t(:'marketing2.discuss_stratergy_and_prioritise')
+      %p= t(:'marketing2.discuss_stratergy_and_prioritise_html')
       .duo__cta
         %a.btn.btn--primary.tools__dot-vote-start{href: "/p/new/dot_vote"}= t(:'marketing2.start_a_dot_vote')
         %a.btn.btn--accent.tools__dot-vote-demo{href: "/p/example/dot_vote"}= t(:'marketing2.try_demo')
@@ -115,7 +108,7 @@
     .duo__text
       %h3= t(:'marketing2.ask_yes_no_questions')
 
-      %p= t(:'marketing2.when_there_are_tasks_to_be_done')
+      %p= t(:'marketing2.when_there_are_tasks_to_be_done_html')
 
       .duo__cta
         %a.btn.btn--primary.tools__count-start{href: "/p/new/count"}= t(:'marketing2.start_a_check')
@@ -129,7 +122,7 @@
   .duo
     .duo__text
       %h3= t(:'marketing2.a_place_for_your')
-      %p= t(:'marketing2.a_loomio_group_is_a_safe_place')
+      %p= t(:'marketing2.a_loomio_group_is_a_safe_place_html')
       %p= t(:'marketing2.its_secure_and_searchable')
 
       .duo__cta
@@ -149,7 +142,7 @@
     .duo__text
       %p= t(:'marketing2.start_a_decision_in_3_steps')
       %ol.p
-        %li= t(:'marketing2.forward_a_group_email')
+        %li= t(:'marketing2.forward_a_group_email_html')
         %li= t(:'marketing2.check_your_inbox')
         %li= t(:'marketing2.your_group_will_be_included_automatically')
 
@@ -167,9 +160,9 @@
 
   .slack__flex
     .feature__image-cell
-      = image_tag 'lance/images/lance/slackbot.png', class: 'feature__image', alt(:'marketing2.loomio_bot_with_plug')
+      = image_tag 'lance/images/lance/slackbot.png', class: 'feature__image', alt: t(:'marketing2.loomio_bot_with_plug')
     .feature__image-cell
-      = image_tag 'lance/images/slack_proposal.gif', class: 'feature__image', alt(:'marketing2.loomio_in_slack')
+      = image_tag 'lance/images/slack_proposal.gif', class: 'feature__image', alt: t(:'marketing2.loomio_in_slack')
 
   .txt--center.m1
     %p= t(:'marketing2.slack_integration_in_standard_plan')
@@ -221,18 +214,15 @@
   .media__flex
     .media__group
       = image_tag 'lance/images/fastcompany.png', class: 'fp-drop-in__image'
-      %a.media__fast-company-link{href: "https://www.fastcompany.com/3029132/fund-this/an-occupy-inspired-app-that-helps-groups-make-actual-group-decisions", target: "_blank"}
-        = t(:'marketing.press.fast_company')
+      %a.media__fast-company-link{href: "https://www.fastcompany.com/3029132/fund-this/an-occupy-inspired-app-that-helps-groups-make-actual-group-decisions", target: "_blank"}= t(:'marketing.press.fast_company')
       — Jay Cassano, Fast Company
     .media__group
       = image_tag 'lance/images/boingboing.png', class: 'fp-drop-in__image'
-      %a.media__boing-boing-list{href: "http://boingboing.net/2014/03/19/loomio-democratic-decision-ma.html", target: "_blank"}
-        = t(:'marketing.press.boingboing')
+      %a.media__boing-boing-list{href: "http://boingboing.net/2014/03/19/loomio-democratic-decision-ma.html", target: "_blank"}= t(:'marketing.press.boingboing')
       — Cory Doctorow, Boing Boing
     .media__group
       = image_tag 'lance/images/bbc.png', class: 'fp-drop-in__image'
-      %a.media__bbc-link{href: "http://www.bbc.co.uk/programmes/b04md5b0", target: "_blank"}
-        = t(:'marketing.press.bbc')
+      %a.media__bbc-link{href: "http://www.bbc.co.uk/programmes/b04md5b0", target: "_blank"}= t(:'marketing.press.bbc')
       — Jon Alexander, BBC Radio 4
 
   %hr.break__long-orange
