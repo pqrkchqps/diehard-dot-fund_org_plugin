@@ -5,14 +5,14 @@ describe PagesController, type: :controller do
 
   describe 'marketing' do
     it 'takes you to the marketing page when logged out' do
-      get '/'
+      get :index
       expect(response.status).to eq 200
       expect(response).to render_template :index
     end
 
     it 'takes you to the marketing page when logged in' do
       sign_in create(:user)
-      get '/'
+      get :index
       expect(response.status).to eq 200
       expect(response).to render_template :index
     end
