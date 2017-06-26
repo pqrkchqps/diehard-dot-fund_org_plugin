@@ -3,6 +3,7 @@
   padding: $padding/2 $padding;
   border: 2px solid #ccc;
   color: $font-color;
+  font-weight: 500;
   text-decoration: none;
   text-align: center;
   background: transparent;
@@ -78,6 +79,23 @@
     background-color: $accent-color;
   }
 }
+
+.btn--accent--raised {
+  @extend %btn--base;
+
+  border-color: darken($accent-color, 5%);
+  background-color: $accent-color;
+  color: $white;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+    background-color: lighten($accent-color, 5%);
+    border-color: $accent-color;
+  }
+}
+
 .btn--green {
   @extend %btn--base;
 

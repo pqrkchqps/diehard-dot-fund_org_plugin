@@ -1,4 +1,5 @@
 .pricing-table {
+  font-weight: 300;
   margin: 0 auto;
   max-width: 750px;
 }
@@ -45,7 +46,7 @@
 }
 
 
-.pricing-table__contact-us, .pricing-table__get-started {
+.pricing-table__get-started {
   text-align: center;
   span{
     font-weight: bold;
@@ -81,5 +82,7 @@
 }
 
 .pricing-table__contact-us {
+  font-weight: 400;
+  text-align: left;
   margin-top: 3rem;
 }

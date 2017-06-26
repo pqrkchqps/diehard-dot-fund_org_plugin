@@ -62,42 +62,28 @@
     .txt--center= t(:'marketing2.choose_the_tool')
   .duo
     .duo__text
-      %h3= t(:'marketing2.reach_clear_outcomes')
-
-      %p= t(:'marketing2.proposals_bring_conclusion_html')
-      %p= t(:'marketing2.hear_from_everyone')
-      %p= t(:'marketing2.proposals_highlight_agreement')
-
-      .duo__cta
-        %a.btn.btn--primary.tools__proposal-start{href: "/p/new/proposal"}= t(:'marketing2.start_a_proposal')
-        %a.btn.btn--accent.tools__proposal-demo{href: "/p/example/proposal"}= t(:'marketing2.try_demo')
-    .duo__image
-      = image_tag 'lance/images/lance/proposal.png', class: 'feature__image', alt: t(:'marketing2.people_doing_thumbs_up_or_down')
-
-  %hr.break__long-blue
-
-  .duo
-    .duo__text
       %h3= t(:'marketing2.simple_scheduling')
 
       %p= t(:'marketing2.time_poll_finds_when_html')
 
       .duo__cta
+        %a.btn.btn--accent--raised.tools__meeting-demo{href: "/p/example/meeting", target: "_blank"}= t(:'marketing2.try_demo')
         %a.btn.btn--primary.tools__meeting-start{href: "/p/new/meeting"}= t(:'marketing2.start_a_time_poll')
-        %a.btn.btn--accent.tools__meeting-demo{href: "/p/example/meeting"}= t(:'marketing2.try_demo')
+      %p
+        %a{href: 'https://www.youtube.com/watch?v=QTqCauE-b9k', target: "_blank"} Watch video: Introduction to Loomio Time Poll
+
 
     .duo__image
       = image_tag 'lance/images/lance/time-poll.png', class: 'feature__image', alt: t(:'marketing2.people_finding_a_time_to_meet')
 
   %hr.break__long-blue
-
   .duo
     .duo__text
       %h3= t(:'marketing2.polling_and_prioritising')
       %p= t(:'marketing2.discuss_stratergy_and_prioritise_html')
       .duo__cta
+        %a.btn.btn--accent--raised.tools__dot-vote-demo{href: "/p/example/dot_vote", target: "_blank"}= t(:'marketing2.try_demo')
         %a.btn.btn--primary.tools__dot-vote-start{href: "/p/new/dot_vote"}= t(:'marketing2.start_a_dot_vote')
-        %a.btn.btn--accent.tools__dot-vote-demo{href: "/p/example/dot_vote"}= t(:'marketing2.try_demo')
 
     .duo__image
       = image_tag 'lance/images/lance/prioritise.png', class: 'feature__image', alt: t(:'marketing2.people_prioritising_options')
@@ -106,13 +92,30 @@
 
   .duo
     .duo__text
+      %h3= t(:'marketing2.reach_clear_outcomes')
+
+      %p= t(:'marketing2.proposals_bring_conclusion_html')
+      %p= t(:'marketing2.hear_from_everyone')
+      %p= t(:'marketing2.proposals_highlight_agreement')
+
+      .duo__cta
+        %a.btn.btn--accent--raised.tools__proposal-demo{href: "/p/example/proposal", target: "_blank"}= t(:'marketing2.try_demo')
+        %a.btn.btn--primary.tools__proposal-start{href: "/p/new/proposal"}= t(:'marketing2.start_a_proposal')
+    .duo__image
+      = image_tag 'lance/images/lance/proposal.png', class: 'feature__image', alt: t(:'marketing2.people_doing_thumbs_up_or_down')
+
+  %hr.break__long-blue
+
+
+  .duo
+    .duo__text
       %h3= t(:'marketing2.ask_yes_no_questions')
 
       %p= t(:'marketing2.when_there_are_tasks_to_be_done_html')
 
       .duo__cta
+        %a.btn.btn--accent--raised.tools__count-demo{href: "/p/example/count"}= t(:'marketing2.try_demo')
         %a.btn.btn--primary.tools__count-start{href: "/p/new/count"}= t(:'marketing2.start_a_check')
-        %a.btn.btn--accent.tools__count-demo{href: "/p/example/count"}= t(:'marketing2.try_demo')
 
     .duo__image
       = image_tag 'lance/images/lance/check.png', class: 'feature__image', alt: t(:'marketing2.people_reaching_goal')
@@ -126,7 +129,7 @@
       %p= t(:'marketing2.its_secure_and_searchable')
 
       .duo__cta
-        %a.btn.btn--primary.tools__group-start{href: "/p/new/count"}= t(:'marketing2.start_a_group')
+        %a.btn.btn--primary.tools__group-start{href: "/g/new", target: "_blank"}= t(:'marketing2.start_a_group')
 
     .duo__image
       = image_tag 'lance/images/lance/group.png', class: 'feature__image', alt: t(:'marketing2.loomio_on_laptop_and_phone')
