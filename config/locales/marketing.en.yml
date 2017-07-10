@@ -1,23 +1,26 @@
 en:
   pricing_page:
     header: Group plans
+    upgrade_for_premium_features: Please upgrade for premium features
     gift: Free
     standard: Gold
     plus: Pro
-    free_trial_html: We'll ask you to choose your pricing plan after a <span>30-day free trial</span>. No credit card required.
+    per_month: /month
     get_started_for_free: Get started for free
     gift_body: For casual users and community groups.
     standard_body_html: For regular users and businesses.
-    pro_body_html: For organisations with multiple groups.
-    basic_features_include: "Basic features include:"
-    one_group: one group
+    plus_body_html: For organisations with multiple groups.
+    gift_features: "Features include:"
+    one_group: One group
     discussions: Discussions
     decisions: Decisions
     category_tags: Category tags
     subgroups: Subgroups
+    particpate_either_way: Partipate by email or in-app
     file_document_storage: File attachments
     password_free_secure_login: Password free, secure login
     email_support: email support
+    community_support: Community support
     coming_soon: Coming soon
     analytics_report: Analytics report
     data_export: Data export (CSV or XLS)
@@ -28,27 +31,28 @@ en:
     gift_price_html: '<strong>$0</strong>'
     annual_standard_price_html: 'or $190 / year'
     annual_plus_price_html: 'or $990 / year'
-    plus_includes_standard: 'Everything in Gold, plus:'
-    standard_includes_free: 'Everything in Free, plus:'
+    plus_features: 'Everything in Gold, plus:'
+    standard_features: 'Everything in Free, plus:'
     multiple_groups: "up to 10 groups"
     premium_support: premium support
     help_with_setup: help with initial setup
     ldap_coming_soon: ActiveDirectory/LDAP coming soon
     custom_subdomain: custom subdomain
     analytics_reports: analytics reports
-    free_is_for_community_and_evaluation_html: |
-      Our free plan is for casual users, communities and anyone who wants to evaluate Loomio for use within their organisation. We rely on paid plans to maintain and enhance Loomio.<br/>
-      We respect your privacy and will never sell your data to third parties, nor put advertising into Loomio.<br/>
-      If you are a non-profit organisation, contact us for a discount.
-
-    prices_in_us_dollars:
-      Prices are in US dollars, plus sales tax where applicable.
-    need_something_else_html: Want private hosting, consultation & training, or custom features? <a href="/contact">Let's talk!</a>
+    free_is_for_community_and_evaluation_html: Our free plan is for casual users, communities and anyone who wants to evaluate Loomio for use within their organisation. We rely on paid plans to maintain and enhance Loomio.
+    privacy_respected: We respect your privacy and will never sell your data to third parties, nor put advertising into Loomio.
+    non_profit_discount: If you are a non-profit organisation, contact us for a discount.
+    prices_in_us_dollars: Prices are in US dollars, plus sales tax where applicable.
+    need_something_else_html: Want private hosting, consultation & training, or custom features?
+    lets_talk_html: <a href="/contact">Let's talk!</a>
+    lets_talk: Let's talk!
 
     custom_subdomain_html: |
       <strong>yourgroup</strong>.loomio.org subdomain
     usage_statistics: usage statistics
     plus_price_html: '<strong>$99</strong>/month'
+    start_group: Start group
+    select: Select
   navigation:
     blog: Blog
     resources: Resources

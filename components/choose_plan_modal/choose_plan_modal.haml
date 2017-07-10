@@ -1,76 +1,63 @@
 %md-dialog.choose-plan-modal
   %md-toolbar
     .md-toolbar-tools.lmo-flex__space-between
-      %h1.lmo-h1{translate: "choose_plan_modal.heading"}
+      %h1.lmo-h1{translate: "pricing_page.upgrade_for_premium_features"}
       %material_modal_header_cancel_button
-      
+
   .md-dialog-content.md-body-1
-    .mobile-choose-plan-modal__flex
-      .buh-flex-child
-        .choose-plan-modal__plan.choose-plan-modal--featured
-          .choose-plan-modal__plan--details
-            .choose-plan-modal__plan-name{translate: "choose_plan_modal.standard"}
-            .choose-plan-modal__plan-price
-              %span.choose-plan-modal__dollar-sign
-                $
-              19
-              %span.choose-plan-modal__payment-frequency{translate: "choose_plan_modal.per_month"}
-            .choose-plan-modal__plan-description{translate: "choose_plan_modal.standard_group_description"}
-          .choose-plan-modal__plan--button
-            %button.choose-plan-modal__select-button{ng-click: "choosePaidPlan('standard')", translate: "choose_plan_modal.select"}
-          %ul.choose-plan-modal__benefits
-            %li{translate: "choose_plan_modal.benefit_1_group"}
-            %li{translate: "choose_plan_modal.benefit_unlimited_members"}
-            %li{translate: "choose_plan_modal.benefit_unlimited_decisions"}
-            %li{translate: "choose_plan_modal.benefit_slack_integration"}
-            %li{translate: "choose_plan_modal.benefit_custom_domain"}
-            %li{translate: "choose_plan_modal.benefit_analytics_reports"}
+    .pricing-table__flex
+      .pricing-table__option.pricing-table__option--gift
+        %h2{translate: "pricing_page.gift"}
+        %p.pricing-table__price{translate: "pricing_page.gift_price_html"}
+        %p.pricing-table__price--annually &nbsp;
+        %p.pricing-table__plan-description{translate: "pricing_page.gift_body"}
+        %p.pricing-table__plan-includes{translate: "pricing_page.gift_features"}
+        %ul
+          %li{translate: "pricing_page.one_group"}
+          %li{translate: "pricing_page.discussions"}
+          %li{translate: "pricing_page.decisions"}
+          %li{translate: "pricing_page.file_document_storage"}
+          %li{translate: "pricing_page.particpate_either_way"}
+          %li{translate: "pricing_page.password_free_secure_login"}
+          %li{translate: "pricing_page.community_support"}
 
-      .buh-flex-child
-        .choose-plan-modal__plan.choose-plan-modal--boring
-          .choose-plan-modal__plan--details
-            .choose-plan-modal__plan-name{translate: "choose_plan_modal.pro"}
-            .choose-plan-modal__plan-price
-              %span.choose-plan-modal__dollar-sign
-                $
-              99
-              %span.choose-plan-modal__payment-frequency{translate: "choose_plan_modal.per_month"}
-            .choose-plan-modal__plan-description{translate: "choose_plan_modal.pro_group_description"}
-          .choose-plan-modal__plan--button
-            %button.choose-plan-modal__select-button{ng-click: "choosePaidPlan('plus')", translate: "choose_plan_modal.select"}
-          %ul.choose-plan-modal__benefits
-            %li{translate: "choose_plan_modal.benefit_10_groups"}
-            %li{translate: "choose_plan_modal.benefit_unlimited_members"}
-            %li{translate: "choose_plan_modal.benefit_unlimited_decisions"}
-            %li{translate: "choose_plan_modal.benefit_slack_integration"}
-            %li{translate: "choose_plan_modal.benefit_custom_domain"}
-            %li{translate: "choose_plan_modal.benefit_priority_support"}
-            %li{translate: "choose_plan_modal.benefit_help_with_setup"}
-            %li{translate: "choose_plan_modal.benefit_analytics_reports"}
-            %li{translate: "choose_plan_modal.benefit_data_export"}
+      .pricing-table__option.pricing-table__option--standard
+        %h2{translate: "pricing_page.standard"}
+        %p.pricing-table__price{translate: "pricing_page.standard_price_html"}
+        %p.pricing-table__price--annually{translate: "pricing_page.annual_standard_price_html"}
+        %p.pricing-table__plan-description{translate: "pricing_page.standard_body_html"}
+        %p.pricing-table__plan-includes{translate: "pricing_page.standard_features"}
+        %ul
+          %li{translate: "pricing_page.slack_integration_html"}
+          %li{translate: "pricing_page.subgroups"}
+          %li{translate: "pricing_page.category_tags"}
+          %li{translate: "pricing_page.custom_subdomain_html"}
+          %li{translate: "pricing_page.data_export"}
+          %li{translate: "pricing_page.customer_support_html"}
+        .pricing-table__button-spacer
+        %md-button.md-accent.md-raised{ng-click: "choosePaidPlan('standard')", translate: "pricing_page.select"}
 
-      .buh-flex-child
-        .choose-plan-modal__plan.choose-plan-modal--boring
-          .choose-plan-modal__plan--details
-            .choose-plan-modal__plan-name{translate: "choose_plan_modal.free"}
-            .choose-plan-modal__plan-price
-              %span.choose-plan-modal__dollar-sign
-                $
-              0
-            .choose-plan-modal__plan-description{translate: "choose_plan_modal.free_group_description"}
-          .choose-plan-modal__plan--button
-            %button.choose-plan-modal__select-button.choose-plan-modal__select-button--gift{ng-disabled: "group.subscriptionKind == 'gift'", ng-click: "chooseGiftPlan()", translate: "choose_plan_modal.select"}
-          %ul.choose-plan-modal__benefits
-            %li{translate: "choose_plan_modal.benefit_1_group"}
-            %li{translate: "choose_plan_modal.benefit_unlimited_members"}
-            %li{translate: "choose_plan_modal.benefit_unlimited_decisions"}
-            %li{translate: "choose_plan_modal.benefit_community_support"}
+      .pricing-table__option
+        %h2{translate: "pricing_page.plus"}
+        %p.pricing-table__price{translate: "pricing_page.plus_price_html"}
+        %p.pricing-table__price--annually{translate: "pricing_page.annual_plus_price_html"}
+        %p.pricing-table__plan-description{translate: "pricing_page.plus_body_html"}
+        %p.pricing-table__plan-includes{translate: "pricing_page.plus_features"}
+        %ul
+          %li{translate: "pricing_page.multiple_groups"}
+          %li{translate: "pricing_page.analytics_report"}
+          %li{translate: "pricing_page.premium_support"}
+          %li{translate: "pricing_page.ldap_coming_soon"}
+
+        .pricing-table__button-spacer
+        %md-button.md-accent.md-raised{ng-click: "choosePaidPlan('plus')", translate: "pricing_page.select"}
 
     .modal-footer
-      .choose_plan_modal__footer
-        %img.choose_plan_modal__mhjbs-head{src: "/img/mhjb.png"}
-        .choose_plan_modal__footer--right
-          %span{translate: "choose_plan_modal.prices_in_us_dollars"}
-          %br
-          %span{translate: "choose_plan_modal.need_help_please"}
-          %button.choose-plan-modal__contact-link{translate: "choose_plan_modal.support_link", ng-click: "openIntercom()"}>
+      .pricing_page__footer
+        %p{translate: "pricing_page.prices_in_us_dollars"}
+        %p{translate: "pricing_page.free_is_for_community_and_evaluation_html"}
+        %p{translate: "pricing_page.privacy_respected"}
+        %p{translate: "pricing_page.non_profit_discount"}
+        %p
+          %span{translate: "pricing_page.need_something_else_html"}
+          %a{translate: "pricing_page.lets_talk", ng-click: "openIntercom()"}>

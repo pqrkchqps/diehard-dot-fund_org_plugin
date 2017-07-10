@@ -4,6 +4,10 @@
   max-width: 750px;
 }
 
+.pricing-table__flex {
+  display: flex;
+}
+
 .pricing-table__wrapper {
   padding-top: 24px;
 }
@@ -14,14 +18,17 @@
 }
 
 .pricing-table__option {
+  flex-basis: 33%;
   background-color: #e2e1de;
-  padding: 12px;
+  padding: 16px;
   position: relative;
   margin-right: 20px;
-  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   h2 {
+    font-size: 3rem;
+    line-height: 2;
+    font-weight: 300;
     text-align: center;
     padding-bottom: 0;
   }
@@ -38,10 +45,10 @@
     text-align: center; }
 }
 
-.pricing-table__price--annually {
-  line-height: 1;
-  margin-top: 0;
+.pricing-table__button-spacer{
+  flex-grow: 1;
 }
+
 
 .pricing-table__plan-description {
   margin-bottom: 15px;
@@ -72,13 +79,21 @@
 .pricing-table__price {
   font-weight: bold;
   text-align: center;
+  font-weight: 300;
   strong {
     font-size: 30px;
     line-height: 36px;
+    font-weight: 300;
   }
-  span {
-    font-weight: normal;
-  }
+  // span {
+  //   font-weight: normal;
+  //   font-weight: 300;
+  // }
+}
+
+.pricing-table__price--annually {
+  line-height: 1;
+  margin-top: 0;
 }
 
 .pricing-table__contact-us {
