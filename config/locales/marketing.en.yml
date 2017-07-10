@@ -1,4 +1,7 @@
 en:
+  premium_feature:
+    premium_feature: Gold feature
+    
   pricing_page:
     header: Group plans
     upgrade_for_premium_features: Please upgrade for premium features
