@@ -1,12 +1,12 @@
 angular.module('loomioApp').config ($provide) ->
-  $provide.decorator 'subgroupsCardDirective', ($delegate, ModalService, ChoosePlanModal) ->
+  $provide.decorator 'tagCardDirective', ($delegate, ModalService, ChoosePlanModal) ->
     controller = $delegate[0].controller
     $delegate[0].controller = ($scope) ->
       controller($scope)
-      startSubgroup = $scope.startSubgroup
-      $scope.startSubgroup = ->
+      createTag = $scope.createTag
+      $scope.createTag = ->
         if $scope.group.subscriptionKind == 'paid'
-          startSubgroup()
+          createTag()
         else
           ModalService.open ChoosePlanModal, group: -> $scope.group
 

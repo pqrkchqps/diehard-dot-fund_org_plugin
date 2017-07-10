@@ -1,12 +1,12 @@
 angular.module('loomioApp').config ($provide) ->
-  $provide.decorator 'subgroupsCardDirective', ($delegate, ModalService, ChoosePlanModal) ->
+  $provide.decorator 'installSlackCardDirective', ($delegate, ModalService, ChoosePlanModal) ->
     controller = $delegate[0].controller
     $delegate[0].controller = ($scope) ->
       controller($scope)
-      startSubgroup = $scope.startSubgroup
-      $scope.startSubgroup = ->
+      install = $scope.install
+      $scope.install = ->
         if $scope.group.subscriptionKind == 'paid'
-          startSubgroup()
+          install()
         else
           ModalService.open ChoosePlanModal, group: -> $scope.group
 
