@@ -45,6 +45,7 @@ module Plugins
         plugin.use_component :choose_plan_modal
         plugin.use_component :subscription_success_modal
         plugin.use_component :manage_group_subscription_link, outlet: :after_group_actions_manage_memberships
+        plugin.use_component :export_group_data_link, outlet: :after_group_actions_manage_memberships_2
         plugin.use_component :premium_feature, outlet: [:subgroup_card_footer, :tag_card_footer, :install_slack_card_footer]
 
 
