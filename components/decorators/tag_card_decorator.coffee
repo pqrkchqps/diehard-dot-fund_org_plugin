@@ -3,10 +3,10 @@ angular.module('loomioApp').config ($provide) ->
     controller = $delegate[0].controller
     $delegate[0].controller = ($scope) ->
       controller($scope)
-      createTag = $scope.createTag
-      $scope.createTag = ->
+      openTagForm = $scope.openTagForm
+      $scope.openTagForm = ->
         if $scope.group.subscriptionKind == 'paid'
-          createTag()
+          openTagForm()
         else
           ModalService.open ChoosePlanModal, group: -> $scope.group
 
