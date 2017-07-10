@@ -1,0 +1,21 @@
+.blank
+  .lmo-blank{ng-if: "show()"}
+    %section.upgrade-plan-card
+      %h2.lmo-card-heading{translate: "upgrade_plan_card.heading"}
+      %ul.upgrade-plan-card__upgrade-items
+        %li
+          %i.fa.fa-slack
+          %span{translate: "upgrade_plan_card.slack_html"}
+        %li
+          %i.fa.fa-globe
+          %span{translate: "upgrade_plan_card.domain_html"}
+        %li
+          %i.fa.fa-money
+          %span{translate: "upgrade_plan_card.donations"}
+
+      %p
+        %a.upgrade-plan-card__more{ng-click: "openUpgradeModal()", translate: "upgrade_plan_card.more"}
+
+      .lmo-flex
+        %md-button.md-primary.md-raised.upgrade-plan-card__upgrade{ng-click: "openUpgradeModal()"}
+          %span{translate: "upgrade_plan_card.upgrade"}

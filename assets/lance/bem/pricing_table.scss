@@ -38,6 +38,10 @@
     text-align: center; }
 }
 
+.pricing-table__price--annually {
+  line-height: 1;
+  margin-top: 0;
+}
 
 .pricing-table__plan-description {
   margin-bottom: 15px;
@@ -58,16 +62,12 @@
     margin-bottom: 20px;
     margin-right: 0;
   }
-  .pricing-table__option--standard {
-    order: 1; }
 }
 
 .pricing-table__option--standard {
   background-color: #f8b365;
-  order: 2;
   margin-left: 0 ! important; }
 
-.pricing-table__option--plus { order: 3; }
 
 .pricing-table__price {
   font-weight: bold;
