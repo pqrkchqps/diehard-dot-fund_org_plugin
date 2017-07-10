@@ -4,8 +4,29 @@
   max-width: 750px;
 }
 
+.pricing-table__modal {
+  height: 101%
+}
+
 .pricing-table__flex {
   display: flex;
+}
+
+@media screen and (max-width: 640px) {
+  .pricing-table__option {
+    margin-right: 0 ! important;
+  }
+  .pricing-table__flex{
+    flex-direction: column;
+  }
+}
+
+.pricing-table__plan-includes {
+  font-style: italic;
+}
+
+.pricing-table__price--annually {
+  margin-bottom: 0;
 }
 
 .pricing-table__wrapper {
@@ -27,7 +48,7 @@
   flex-direction: column;
   h2 {
     font-size: 3rem;
-    line-height: 2;
+    line-height: 1.3;
     font-weight: 300;
     text-align: center;
     padding-bottom: 0;
@@ -64,16 +85,15 @@
   }
 }
 
-@media all and (max-width: 599px) {
-  .pricing-table__option {
-    margin-bottom: 20px;
-    margin-right: 0;
-  }
-}
 
 .pricing-table__option--standard {
-  background-color: #f8b365;
-  margin-left: 0 ! important; }
+  background-color: $loomio-orange;
+  margin-left: 0 ! important;
+}
+
+.pricing-table__option--plus {
+  margin-right: 0 ! important;
+}
 
 
 .pricing-table__price {
@@ -85,10 +105,6 @@
     line-height: 36px;
     font-weight: 300;
   }
-  // span {
-  //   font-weight: normal;
-  //   font-weight: 300;
-  // }
 }
 
 .pricing-table__price--annually {

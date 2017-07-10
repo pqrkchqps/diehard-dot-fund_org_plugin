@@ -3,40 +3,4 @@
   width: auto;
 }
 
-
 @import "../../assets/lance/bem/pricing_table";
-
-.choose-plan-modal__contact-link {
-  @include lmoBtnLink;
-  color: $link-color;
-}
-
-.choose-plan-modal__select-button {
-  @include lmoBtnOffer;
-  margin: 10px 0;
-}
-
-.mobile-choose-plan-modal__flex {
-  @include displayFlex;
-  flex-direction: column;
-}
-
-.choose-plan-modal__plan {
-  text-align: center;
-  margin-bottom: 20px;
-  padding: 10px;
-}
-
-.choose-plan-modal--featured {
-  background-color: #EE9F49;
-}
-
-.choose-plan-modal--boring {
-  background-color: #dfdfdf;
-}
-
-ul.choose-plan-modal__benefits {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
