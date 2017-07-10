@@ -40,14 +40,12 @@ module Plugins
 
         # bx stuff
         plugin.use_asset 'components/services/chargify_service.coffee'
-        plugin.use_asset 'components/decorators/group_page_controller_decorator.coffee'
-        plugin.use_asset 'components/decorators/new_subgroup_decorator.coffee'
-        
+        plugin.use_asset_directory 'components/decorators'
+
         plugin.use_component :choose_plan_modal
-        # plugin.use_component :support_loomio_modal
         plugin.use_component :subscription_success_modal
-        # plugin.use_component :upgrade_plan_card, outlet: :before_group_page_column_right
         plugin.use_component :manage_group_subscription_link, outlet: :after_group_actions_manage_memberships
+        plugin.use_component :golden_feature, outlet: [:slack_card_feature, :tag_card_feature, :subgroup_feature]
 
         plugin.use_translations 'config/locales', :marketing
 
