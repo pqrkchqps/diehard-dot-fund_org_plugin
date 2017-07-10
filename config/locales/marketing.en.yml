@@ -22,10 +22,9 @@ en:
     decisions: Decisions
     category_tags: Category tags
     subgroups: Subgroups
-    particpate_either_way: Partipate by email or in-app
+    particpate_either_way: Participate by email or in-app
     file_document_storage: File attachments
     password_free_secure_login: Password free, secure login
-    email_support: email support
     community_support: Community support
     coming_soon: Coming soon
     analytics_report: Analytics report
@@ -39,12 +38,11 @@ en:
     annual_plus_price_html: 'or $990 / year'
     plus_features: 'Everything in Gold, plus:'
     standard_features: 'Everything in Free, plus:'
-    multiple_groups: "up to 10 groups"
-    premium_support: premium support
+    multiple_groups: "Up to 10 groups"
+    premium_support: Premium support
     help_with_setup: help with initial setup
     ldap_coming_soon: ActiveDirectory/LDAP coming soon
-    custom_subdomain: custom subdomain
-    analytics_reports: analytics reports
+    custom_subdomain: Custom subdomain
     free_is_for_community_and_evaluation_html: Our free plan is for casual users, communities and anyone who wants to evaluate Loomio for use within their organisation. We rely on paid plans to maintain and enhance Loomio.
     privacy_respected: We respect your privacy and will never sell your data to third parties, nor put advertising into Loomio.
     non_profit_discount: If you are a non-profit organisation, contact us for a discount.
@@ -54,7 +52,7 @@ en:
     lets_talk: Let's talk!
 
     custom_subdomain_html: |
-      <strong>yourgroup</strong>.loomio.org subdomain
+      Custom subdomain (<strong>yourgroup</strong>.loomio.org)
     usage_statistics: usage statistics
     plus_price_html: '<strong>$99</strong>/month'
     start_group: Start a free group
