@@ -1,4 +1,12 @@
 en:
+  subscription_success_modal:
+    heading: Thanks for upgrading!
+    receipt: You'll receive an email with a link to the billing portal, where you can change, upgrade or cancel your subscription, and access statement history.
+    got_questions_then: If you have any questions, need some help getting started, or want to setup a custom subdomain for your group, please
+    contact_us: contact us.
+    sign_off: ❤️  from the Loomio team.
+    ok_got_it: Ok, got it!
+
   premium_feature:
     premium_feature: Gold feature
 
