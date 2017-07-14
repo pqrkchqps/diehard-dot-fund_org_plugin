@@ -1,7 +1,7 @@
 %section.hero
   .duo
     .duo__image
-      = image_tag 'lance/images/lance/badmeeting.png', class: 'intro__image', title: t(:'marketing.people_not_enjoying_their_meeting')
+      = image_tag 'lance/images/lance/badmeeting.png', class: 'intro__image', alt: t(:'marketing.people_not_enjoying_their_meeting')
     .duo__text.intro__problem-text
       %ul
         %li= t(:'marketing.too_many_group_emails')
@@ -61,7 +61,7 @@
 
 
     .duo__image
-      = image_tag 'lance/images/lance/time-poll.png', class: 'feature__image', title: t(:'marketing.people_finding_a_time_to_meet')
+      = image_tag 'lance/images/lance/time-poll.png', class: 'feature__image', alt: t(:'marketing.people_finding_a_time_to_meet')
 
   %hr.break__long-blue
   .duo
@@ -73,7 +73,7 @@
         %a.btn.btn--primary.tools__dot-vote-start{href: "/p/new/dot_vote"}= t(:'marketing.start_a_dot_vote')
 
     .duo__image
-      = image_tag 'lance/images/lance/prioritise.png', class: 'feature__image', title: t(:'marketing.people_prioritising_options')
+      = image_tag 'lance/images/lance/prioritise.png', class: 'feature__image', alt: t(:'marketing.people_prioritising_options')
 
   %hr.break__long-blue
 
@@ -89,7 +89,7 @@
         %a.btn.btn--accent--raised.tools__proposal-demo{href: "/p/example/proposal", target: "_blank"}= t(:'marketing.try_demo')
         %a.btn.btn--primary.tools__proposal-start{href: "/p/new/proposal"}= t(:'marketing.start_a_proposal')
     .duo__image
-      = image_tag 'lance/images/lance/proposal.png', class: 'feature__image', title: t(:'marketing.people_doing_thumbs_up_or_down')
+      = image_tag 'lance/images/lance/proposal.png', class: 'feature__image', alt: t(:'marketing.people_doing_thumbs_up_or_down')
 
   %hr.break__long-blue
 
@@ -105,7 +105,7 @@
         %a.btn.btn--primary.tools__count-start{href: "/p/new/count"}= t(:'marketing.start_a_check')
 
     .duo__image
-      = image_tag 'lance/images/lance/check.png', class: 'feature__image', title: t(:'marketing.people_reaching_goal')
+      = image_tag 'lance/images/lance/check.png', class: 'feature__image', alt: t(:'marketing.people_reaching_goal')
 
   %hr.break__long-blue
 
@@ -119,7 +119,7 @@
         %a.btn.btn--primary.tools__group-start{href: "/g/new", target: "_blank"}= t(:'marketing.start_a_group')
 
     .duo__image
-      = image_tag 'lance/images/lance/group.png', class: 'feature__image', title: t(:'marketing.diehard_fund_on_laptop_and_phone')
+      = image_tag 'lance/images/lance/group.png', class: 'feature__image', alt: t(:'marketing.diehard_fund_on_laptop_and_phone')
 
   %hr.break__long-orange
 
@@ -150,9 +150,9 @@
 
   .slack__flex
     .feature__image-cell
-      = image_tag 'lance/images/lance/slackbot.png', class: 'feature__image', title: t(:'marketing.diehard_fund_bot_with_plug')
+      = image_tag 'lance/images/lance/slackbot.png', class: 'feature__image', alt: t(:'marketing.diehard_fund_bot_with_plug')
     .feature__image-cell
-      = image_tag 'lance/images/slack_proposal.gif', class: 'feature__image', title: t(:'marketing.diehard_fund_in_slack')
+      = image_tag 'lance/images/slack_proposal.gif', class: 'feature__image', alt: t(:'marketing.diehard_fund_in_slack')
 
   .txt--center.m1
     %p= t(:'marketing.slack_integration_in_standard_plan')
@@ -243,7 +243,7 @@
       %p
         %a.about__about-us-link{href: "/about"}= t(:'marketing.about_us')
     .duo__image
-      = image_tag 'lance/images/teamphoto.jpg', title: t(:'marketing.diehard_fund_team_photo')
+      = image_tag 'lance/images/teamphoto.jpg', alt: t(:'marketing.diehard_fund_team_photo')
 
   %hr.break__long-orange
 
@@ -251,4 +251,4 @@
   .grd
     .grd-row
       .grd-row-col-6-6
-        = image_tag "lance/images/lance/using_diehard_fund.png", class: 'feature__image', title: t(:'marketing.feature_image_alt_text')
+        = image_tag "lance/images/lance/using_diehard_fund.png", class: 'feature__image', alt: t(:'marketing.feature_image_alt_text')
