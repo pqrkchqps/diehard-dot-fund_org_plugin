@@ -1,4 +1,4 @@
-angular.module('loomioApp').directive 'premiumFeature', ->
+angular.module('diehard_fundApp').directive 'premiumFeature', ->
   scope: {}
   restrict: 'E'
   replace: true

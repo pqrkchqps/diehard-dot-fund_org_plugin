@@ -22,12 +22,12 @@ a:visited { color: #4076D4; }
 
 @media (max-width: 600px) {
   .marketing__hero-button { display: none; }
-  .marketing__loomio-process-text {
+  .marketing__diehard_fund-process-text {
     text-align: center;
   }
   .marketing__arrow-image { display: none; }
-  .marketing__loomio-process-image,
-  .marketing__loomio-process-image { padding: 0px; }
+  .marketing__diehard_fund-process-image,
+  .marketing__diehard_fund-process-image { padding: 0px; }
   .marketing__feature {
     max-width: 100%;
     margin: 20px 0;
@@ -44,8 +44,8 @@ a:visited { color: #4076D4; }
 @media (min-width: 600px) {
   .marketing__hero-button--small-device { display: none; }
   .marketing__feature { margin: 10px; }
-  .marketing__loomio-process-text { padding-right: 30px; }
-  .marketing__loomio-process-image { padding-left: 20px }
+  .marketing__diehard_fund-process-text { padding-right: 30px; }
+  .marketing__diehard_fund-process-image { padding-left: 20px }
 }
 
 @media (max-width: 1000px) {
@@ -71,11 +71,11 @@ a:visited { color: #4076D4; }
   margin: 0 0 50px;
 }
 
-.marketing__loomio-process {
+.marketing__diehard_fund-process {
   padding-top: 0px;
 }
 
-.marketing__loomio-on-devices {
+.marketing__diehard_fund-on-devices {
   max-width: 850px;
   margin: auto;
   padding-bottom: 50px;

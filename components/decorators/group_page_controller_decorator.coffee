@@ -1,4 +1,4 @@
-angular.module('loomioApp').config ($provide) ->
+angular.module('diehard_fundApp').config ($provide) ->
   $provide.decorator '$controller', ($delegate, $location, AppConfig, Session, AbilityService, ChoosePlanModal, SubscriptionSuccessModal) ->
     ->
       ctrl = $delegate arguments...

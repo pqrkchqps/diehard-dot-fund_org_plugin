@@ -1,4 +1,4 @@
-angular.module('loomioApp').config ($provide) ->
+angular.module('diehard_fundApp').config ($provide) ->
   $provide.decorator 'installSlackCardDirective', ($delegate, ModalService, ChoosePlanModal) ->
     controller = $delegate[0].controller
     $delegate[0].controller = ($scope) ->

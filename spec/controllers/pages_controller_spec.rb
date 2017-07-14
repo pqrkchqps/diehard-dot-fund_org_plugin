@@ -28,7 +28,7 @@ describe PagesController, type: :controller do
     it 'sets the help links correctly' do
       sign_in usuario
       get :about
-      expect(assigns(:help_link)).to eq 'https://loomio.gitbooks.io/manual/content/es/index.html'
+      expect(assigns(:help_link)).to eq 'https://diehard_fund.gitbooks.io/manual/content/es/index.html'
     end
   end
 end
