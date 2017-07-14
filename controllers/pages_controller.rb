@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   prepend_view_path 'plugins/diehard-dot-fund_org_plugin/views'
-  Plugins::Diehard_FundOrg::Plugin::DIEHARD_FUND_ORG_PAGES.each { |page| define_method page, ->{} }
+  Plugins::DiehardFundOrg::Plugin::DiehardFund_ORG_PAGES.each { |page| define_method page, ->{} }
 
   before_action :set_locale_specific_links
 

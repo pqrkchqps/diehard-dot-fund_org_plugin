@@ -1,5 +1,5 @@
 module Plugins
-  module Diehard_FundOrg
+  module DiehardFundOrg
     class Plugin < Plugins::Base
       setup! 'diehard-dot-fund_org_plugin' do |plugin|
         plugin.enabled = true
@@ -20,7 +20,7 @@ module Plugins
         plugin.use_page :"press-pack",     'http://blog.diehard.fund/press-pack',                                      redirect: true
         plugin.use_page :roadmap,          'https://trello.com/b/tM6QGCLH/diehard_fund-roadmap',                           redirect: true
         plugin.use_page :community,        'https://www.diehard.fund/g/WmPCB3IR/diehard_fund-community',                     redirect: true
-        plugin.use_page :timeline,         'http://www.tiki-toki.com/timeline/entry/313361/Diehard_Fund',                  redirect: true
+        plugin.use_page :timeline,         'http://www.tiki-toki.com/timeline/entry/313361/DiehardFund',                  redirect: true
         plugin.use_page :privacy,          'https://diehard_fund.gitbooks.io/manual/content/en/privacy_policy.html',       redirect: true
         plugin.use_page :terms_of_service, 'https://diehard_fund.gitbooks.io/manual/content/en/terms_of_service.html',     redirect: true
         plugin.use_page :third_parties,    'https://diehard_fund.gitbooks.io/manual/content/en/third_party_services.html', redirect: true

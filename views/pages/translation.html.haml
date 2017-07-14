@@ -7,26 +7,26 @@
           %p
             This is a reference page for the translators and developers.
             %br
-            For details about Diehard_Fund translation, please see <a href="https://github.com/diehard_fund/diehard_fund/tree/master/docs/en/translation">this guide</a>.
+            For details about DiehardFund translation, please see <a href="https://github.com/diehard_fund/diehard_fund/tree/master/docs/en/translation">this guide</a>.
 
           %h2 Updates
           %p
             Translations were last released
-            %span.code #{time_ago_in_words(Diehard_Fund::I18n::TRANSLATION_UPDATED_AT)} ago
+            %span.code #{time_ago_in_words(DiehardFund::I18n::TRANSLATION_UPDATED_AT)} ago
 
           %h2 Supported languages (#{selectable_locales.count})
           %table.code
             %tr
               %th Language
-              %th Diehard_Fund 1.0
-              %th.beta-translation Diehard_Fund Beta (old)
+              %th DiehardFund 1.0
+              %th.beta-translation DiehardFund Beta (old)
               %th Code
               %th English name
 
             - selectable_locales.each_with_index do |locale, index|
               %tr
                 %td= link_to I18n.t(locale.to_sym, scope: :native_language_name), root_path(locale: locale)
-                - coverage = Diehard_Fund::I18n::TRANSLATION_COVERAGE[locale]
+                - coverage = DiehardFund::I18n::TRANSLATION_COVERAGE[locale]
                 %td
                   -if coverage
                     -coverage.each do |resource, percentage|
@@ -42,12 +42,12 @@
                 %td= locale
                 %td= t(locale)
 
-          %h2 Test Languages (#{Diehard_Fund::I18n::TEST_LOCALES.count})
+          %h2 Test Languages (#{DiehardFund::I18n::TEST_LOCALES.count})
           %table.code
-            - Diehard_Fund::I18n::TEST_LOCALES.each_with_index do |locale, index|
+            - DiehardFund::I18n::TEST_LOCALES.each_with_index do |locale, index|
               %tr
                 %td= link_to I18n.t(locale.to_sym, scope: :native_language_name), root_path(locale: locale)
-                - coverage = Diehard_Fund::I18n::TRANSLATION_COVERAGE[locale]
+                - coverage = DiehardFund::I18n::TRANSLATION_COVERAGE[locale]
                 %td
                   -if coverage
                     -coverage.each do |resource, percentage|
@@ -70,7 +70,7 @@
 
           %h2 Technical
           %p
-            Your browser reports a list of preferred languages to Diehard_Fund when it asks for pages. Here is what your browser is requesting :
+            Your browser reports a list of preferred languages to DiehardFund when it asks for pages. Here is what your browser is requesting :
 
           %p.code
             - # not quite honest
@@ -83,7 +83,7 @@
 
           %p The current fallback settings for diehard_fund:
           %table.code
-            - Diehard_Fund::I18n::FALLBACKS.each_pair do |k,v|
+            - DiehardFund::I18n::FALLBACKS.each_pair do |k,v|
               %tr
                 %td= k
                 %td -->
