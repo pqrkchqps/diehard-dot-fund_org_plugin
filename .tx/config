@@ -1,7 +1,7 @@
 [main]
 host = https://www.transifex.com
 
-[diehard_fund-1.marketing]
+[loomio-1.marketing]
 file_filter = config/locales/marketing.<lang>.yml
 source_file = config/locales/marketing.en.yml
 source_lang = en
