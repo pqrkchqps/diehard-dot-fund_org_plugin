@@ -17,4 +17,4 @@ angular.module('diehard_fundApp').factory 'ChargifyService', (AppConfig, Session
       ).join('&')
 
     chargify: ->
-      AppConfig.pluginConfig('diehard_fund_org_plugin').config.chargify
+      AppConfig.pluginConfig('diehard-dot-fund_org_plugin').config.chargify
