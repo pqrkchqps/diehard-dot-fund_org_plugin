@@ -1,7 +1,7 @@
 module Plugins
   module Diehard_FundOrg
     class Plugin < Plugins::Base
-      setup! :diehard_fund_org_plugin do |plugin|
+      setup! 'diehard-dot-fund_org_plugin' do |plugin|
         plugin.enabled = true
 
         DIEHARD_FUND_ORG_PAGES = %w(about
