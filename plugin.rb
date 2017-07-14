@@ -14,12 +14,12 @@ module Plugins
         DIEHARD_FUND_ORG_PAGES.each { |page| plugin.use_page page, "pages##{page}" }
         plugin.use_class 'controllers/pages_controller'
 
-        plugin.use_page :help,             'http://help.diehard_fund.org',                                                 redirect: true
-        plugin.use_page :blog,             'http://blog.diehard_fund.org',                                                 redirect: true
-        plugin.use_page :press,            'http://blog.diehard_fund.org/press-pack',                                      redirect: true
-        plugin.use_page :"press-pack",     'http://blog.diehard_fund.org/press-pack',                                      redirect: true
+        plugin.use_page :help,             'http://help.diehard.fund',                                                 redirect: true
+        plugin.use_page :blog,             'http://blog.diehard.fund',                                                 redirect: true
+        plugin.use_page :press,            'http://blog.diehard.fund/press-pack',                                      redirect: true
+        plugin.use_page :"press-pack",     'http://blog.diehard.fund/press-pack',                                      redirect: true
         plugin.use_page :roadmap,          'https://trello.com/b/tM6QGCLH/diehard_fund-roadmap',                           redirect: true
-        plugin.use_page :community,        'https://www.diehard_fund.org/g/WmPCB3IR/diehard_fund-community',                     redirect: true
+        plugin.use_page :community,        'https://www.diehard.fund/g/WmPCB3IR/diehard_fund-community',                     redirect: true
         plugin.use_page :timeline,         'http://www.tiki-toki.com/timeline/entry/313361/Diehard_Fund',                  redirect: true
         plugin.use_page :privacy,          'https://diehard_fund.gitbooks.io/manual/content/en/privacy_policy.html',       redirect: true
         plugin.use_page :terms_of_service, 'https://diehard_fund.gitbooks.io/manual/content/en/terms_of_service.html',     redirect: true

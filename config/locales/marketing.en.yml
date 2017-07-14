@@ -59,7 +59,7 @@ en:
     lets_talk: Let's talk!
 
     custom_subdomain_html: |
-      Custom subdomain (<strong>yourgroup</strong>.diehard_fund.org)
+      Custom subdomain (<strong>yourgroup</strong>.diehard.fund)
     usage_statistics: usage statistics
     plus_price_html: '<strong>$99</strong>/month'
     start_group: Start a free group
@@ -144,7 +144,7 @@ en:
     make_a_decision_in_email: Make a decision in email, with anyone.
     no_prior_setup_required: No prior setup required. Use it any time.
     start_a_decision_in_3_steps: "Start a decision in 3 steps:"
-    forward_a_group_email_html: Forward a group email to <code>decide@diehard_fund.org</code>
+    forward_a_group_email_html: Forward a group email to <code>decide@diehard.fund</code>
     check_your_inbox: Check your inbox for an email from Diehard_Fund
     your_group_will_be_included_automatically: Start a decision, your group will be included automatically.
     watch_the_video_to_see_it: Watch the video to see it in action!
