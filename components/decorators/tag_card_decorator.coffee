@@ -1,4 +1,4 @@
-angular.module('diehard_fundApp').config ($provide) ->
+angular.module('diehardFundApp').config ($provide) ->
   $provide.decorator 'tagCardDirective', ($delegate, ModalService, ChoosePlanModal) ->
     controller = $delegate[0].controller
     $delegate[0].controller = ($scope) ->

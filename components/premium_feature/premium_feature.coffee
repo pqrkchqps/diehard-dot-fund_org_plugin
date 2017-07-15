@@ -1,4 +1,4 @@
-angular.module('diehard_fundApp').directive 'premiumFeature', ->
+angular.module('diehardFundApp').directive 'premiumFeature', ->
   scope: {}
   restrict: 'E'
   replace: true

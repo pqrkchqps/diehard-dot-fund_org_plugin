@@ -1,4 +1,4 @@
-angular.module('diehard_fundApp').directive 'exportGroupDataLink', ->
+angular.module('diehardFundApp').directive 'exportGroupDataLink', ->
   scope: {group: '='}
   templateUrl: 'generated/components/export_group_data_link/export_group_data_link.html'
   controller: ($scope, $window, AbilityService, ModalService, ChoosePlanModal, ChargifyService) ->
