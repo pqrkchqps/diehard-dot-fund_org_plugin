@@ -4,9 +4,12 @@
       = image_tag 'lance/images/lance/choose_your_role.png', class: 'intro__image', alt: t(:'marketing.your_choice')
     .duo__text.intro__problem-text
       %ul
-        %li= t(:'marketing.designer_role')
-        %li= t(:'marketing.builder_role')
-        %li= t(:'marketing.investor_role')
+        %li
+	  %p= t(:'marketing.designer_role')
+        %li
+          %p= t(:'marketing.builder_role')
+        %li
+          %p= t(:'marketing.investor_role')
       %p=t(:'marketing.your_choice')
 
       %p
