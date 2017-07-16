@@ -37,7 +37,6 @@ module Plugins
         plugin.use_static_asset :assets, 'lance/index.scss', standalone: true
         plugin.use_static_asset :assets, 'lance/ahoy.coffee', standalone: true
         plugin.use_static_asset_directory :"assets/lance/images", standalone: true
-        plugin.use_static_asset_directory :"assets/lance/fonts", standalone: true
 
 
         # bx stuff
