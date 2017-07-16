@@ -1,18 +1,18 @@
 @font-face {
   font-family: builderFont;
-  src: font-url(fonts/BLOKTYPE.TTF);
+  src: font-url('fonts/BLOKTYPE.TTF') format('truetype'),;
 }
 @font-face {
   font-family: investorFont;
-  src: font-url(fonts/DollarBill.ttf);
+  src: font-url('fonts/DollarBill.ttf') format('truetype'),;
 }
 @font-face {
   font-family: designerFont;
-  src: font-url(fonts/noelanscript.otf);
+  src: font-url('fonts/noelanscript.otf') format('opentype'),;
 }
 @font-face {
   font-family: diehardFont;
-  src: font-url(fonts/DESTROY_.TFF);
+  src: font-url('fonts/DESTROY_.TFF') format('truetype'),;
 }
 
 
