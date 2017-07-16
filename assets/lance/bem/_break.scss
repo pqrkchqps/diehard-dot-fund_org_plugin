@@ -10,6 +10,11 @@
   opacity: .7;
 }
 
+.break_no_margin_long-orange {
+  @extend .break;
+  margin: 0;
+  background-image: image-url("lance/long-line-orange.png");
+}
 .break__long-orange {
   @extend .break;
   background-image: image-url("lance/long-line-orange.png");
