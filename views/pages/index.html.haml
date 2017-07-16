@@ -1,23 +1,23 @@
 %section.hero
   .duo
     .duo__image
-      = image_tag 'lance/images/lance/choose_your_role.png', class: 'intro__image', alt: t(:'marketing.your_choice')
+      = image_tag 'lance/images/lance/choose_your_role.png', class: 'intro__image', alt: t(:'marketing.choose_your_role')
     .duo__text.intro__problem-text
-      %h2=t(:'marketing.diehard_dreamers_get_paid')
-      %p= t(:'marketing.choose_your_role:')
+      %h3=t(:'marketing.diehard_dreamers_get_paid')
+      %p= t(:'marketing.choose_your_role')
       %ul
         %li
           %p
             .designer-font
-              t(:'marketing.designer_role'):
+              =t(:'marketing.designer_role'):
             .standard-font
-              t(:'marketing.designes_description')
+              =t(:'marketing.designes_description')
         %li
           %p
             .designer-font
-              t(:'marketing.builder_role'):
+              =t(:'marketing.builder_role'):
             .standard-font
-              t(:'marketing.builder_description')
+              =t(:'marketing.builder_description')
         %li
           %p
             .designer-font
