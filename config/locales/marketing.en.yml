@@ -91,17 +91,21 @@ en:
     trademark_statement: © 2017 Dreamer Assist Corporation. All rights reserved. “Diehard.Fund” is a registered trademark of Dreamer Assist Corporation.
 
     not_slack: Diehard.Fund is not created by, affiliated with, or supported by Slack Technologies, Inc.
-    diehard_fund_school: Diehard.Fund school
+    diehard_fund_school: Diehard.Fund School
     company_handbook: Company handbook
 
   marketing:
     cooperative_groups: Cooperative groups
     make_a_decision: Make a decision
     start_a_group: Start a group
-    designer_role: Design a game idea that gets support, get paid
-    builder_role: Build a product that fits a market, cash up front
-    investor_role: Preorder a game, get a return on investment
-    your_choice: Choose how you want to contribute
+    designer_role: Designers
+    builder_role: Builders
+    investor_role: Investors
+    designer_description: killer game proposals get funded
+    builder_description: name your price and get cash up front
+    investor_description: game preorders with a ROI
+    diehard_dreamers_get_paid: Diehard Dreamers Get Paid $$$
+    choose_your_role: you choose how
     diehard_fund_helps: DiehardFund helps
     boards_and_committees: Boards & Committees
     make_decisions_between_meetings:  Make decisions between meetings
