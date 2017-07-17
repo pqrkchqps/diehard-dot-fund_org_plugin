@@ -21,27 +21,50 @@
 
 %section.helps
   %header
-    %h2.txt--center= t(:'marketing.diehard_fund_helps')
-  .helps__flex
-    .helps__group
-      %h3= t(:'marketing.boards_and_committees')
-      %ul
-        %li= t(:'marketing.make_decisions_between_meetings')
-        %li= t(:'marketing.approve_resolutions')
-        %li= t(:'marketing.everything_in_one_place')
-    .helps__group
-      %h3= t(:'marketing.cooperative_groups')
-      %ul
-        %li= t(:'marketing.increase_transparency')
-        %li= t(:'marketing.more_effecient_meetings')
-        %li= t(:'marketing.clear_decisions')
-    .helps__group
-      %h3= t(:'marketing.government_and_community')
-      %ul
-        %li= t(:'marketing.give_people_a_voice')
-        %li= t(:'marketing.increase_accessibility')
-        %li= t(:'marketing.build_empathy')
+    %h2.txt--center= t(:'marketing.company_mission_headline')
+  .duo
+    .duo__text
+      %h3= t(:'marketing.diehard_&_dreamer_description')
+    .duo__image
+      = image_tag 'lance/images/dreamer-assist-logo-big.png', class: 'intro__image'
   %hr.break__long-orange
+
+%section.helps
+  %header
+    %h2.txt--center= t(:'marketing.company_mission_headline')
+  .duo
+    .duo__text
+      %h3= t(:'marketing.diehard_&_dreamer_description')
+    .duo__image
+      = image_tag 'lance/images/lance/choose_your_role.png', class: 'intro__image', alt: t(:'marketing.choose_your_role')
+  %hr.break__long-blue
+
+  %header
+    %h2.txt--center= t(:'marketing.you_can_make_a_difference')
+  .duo
+    .duo__text
+      %h3= t(:'marketing.difference_maker_description')
+    .duo__text
+      %h3= t(:'marketing.we_rise_by_lifting_others')
+  %hr.break__long-blue
+
+  %header
+    %h2.txt--center= t(:'marketing.company_mission_headline')
+  .duo
+    .duo__text
+      %h3= t(:'marketing.code_contributions')
+    .duo__image
+      = image_tag 'lance/images/AGPLv3_Logo.svg', class: 'intro__image'
+  %hr.break__long-blue
+
+  %header
+    %h2.txt--center= t(:'marketing.company_mission_headline')
+  .duo
+    .duo__text
+      %h3= t(:'marketing.donations_are_needed')
+    .duo__image
+      = image_tag 'lance/images/donate.png', class: 'intro__image'
+  %hr.break__long-blue
 
 %section.tools#features
   %header
