@@ -19,7 +19,13 @@
 
   %hr.break__long-orange
   .duo
-    .diagram= 'Title: How it works\nA->B: Normal Line\nB-->C: Dashed Line\nC->>D: Open Arrow\nD->E: Dashed Open Arrow\E->A: Back To Start'
+    .diagram
+      = 'Title: How it works'
+      = 'A->B: Normal Line'
+      = 'B-->C: Dashed Line'
+      = 'C->>D: Open Arrow'
+      = 'D-->>E: Dashed Open Arrow'
+      = 'E->A: Back To Start'
     :javascript 
       $(".diagram").sequenceDiagram({theme: 'hand'});
 
