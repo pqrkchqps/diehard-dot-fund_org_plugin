@@ -18,6 +18,11 @@
             .standard-font= t(:'marketing.investor_description')
 
   %hr.break__long-orange
+  .duo
+    .diagram= A->B: Message
+    :javascript 
+      $(".diagram").sequenceDiagram({theme: 'hand'});
+
 
 %section.helps
   %header
