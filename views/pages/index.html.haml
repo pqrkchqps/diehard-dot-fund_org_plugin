@@ -18,26 +18,32 @@
             .standard-font= t(:'marketing.investor_description')
 
   %hr.break__long-orange
-  .duo
-    .diagram
-      = 'Title: How it works'
-      = 'A->B: Normal Line'
-      = 'B-->C: Dashed Line'
-      = 'C->>D: Open Arrow'
-      = 'D-->>E: Dashed Open Arrow'
-      = 'E->A: Back To Start'
-    :javascript 
-      $(".diagram").sequenceDiagram({theme: 'hand'});
-
-
-%section.helpst
   %header
-    %h2.txt--center= t(:'marketing.company_mission_headline')
-  .duo
-    .duo__text
-      %h3= t(:'marketing.diehard_&_dreamer_description')
-    .duo__image
-      = image_tag 'lance/images/dreamer-assist-logo-big.png', class: 'intro__image'
+    %h2.txt--center How it works
+  .diagram.txt--center
+    = 'Title: An Example Of Typical Workflow'
+    = 'Designers->Designers: Designers Form Group'
+    = 'Designers->Builders: Designers Create Proposal'
+    = 'Builders->Builders: Builders Form Group'
+    = 'Builders->Designers: Builders Return A Price Quote'
+    = 'Designers->Designers: Designers Add Their Fee To Quote'
+    = 'Designers->Investors: Final Proposal Posted To Investors'
+    = 'Investors-->Builders: Proposal Is Fully Funded And Builders Get Paid'
+    = 'Investors-->Designers: Proposal Is Fully Funded And Designers Get Paid'
+    = 'Investors->Investors: Investors Form Automatically Group'
+    = 'Investors->Investors: Each Has Shares Proportional To Investment Made'
+    = 'Builders->Investors: Builders Complete Minimum Viable Product'
+    = 'Public->Investors: Public Buys Copies Of MVP'
+    = 'Investors->Investors: Each Investor Gets Paid Based On Shares'
+    = 'Public->Designers: Players Become Designers By Creating New Requirements'
+    = 'Public->Investors: Players Preorder MVP 2.0'
+    = 'Public->Builders: Players Become Artists, Programmers, Writers...'
+    = 'Public->Builders: Professionals Join Groups To Secure Contracts'
+    = 'Designers->Investors: Designers Buy Right To Produce MVP 2.0'
+    = 'Designers-->Builders: Designers Create Proposal...'
+  :javascript 
+    $(".diagram").sequenceDiagram({theme: 'hand'});
+
   %hr.break__long-orange
 
 %section.helps
@@ -47,7 +53,7 @@
     .duo__text
       %h3= t(:'marketing.diehard_&_dreamer_description')
     .duo__image
-      = image_tag 'lance/images/lance/choose_your_role.png', class: 'intro__image', alt: t(:'marketing.choose_your_role')
+      = image_tag 'lance/images/dreamer-assist-logo-big.png', class: 'intro__image'
   %hr.break__long-blue
 
   %header
