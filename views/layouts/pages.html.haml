@@ -37,31 +37,5 @@
     %footer.footer
       .wrapper
         %section.footer__section.grid
-          %ul.footer__list
-            %li.footer__item.footer__sign-in-link
-              %a{href: '/dashboard', title: t(:"titles.sign_in")}= t :'navigation.login'
-            %li.footer__item.footer__start-group-link
-              %a{href: '/start_group?utm_source=diehard.fund&utm_medium=front_page&utm_campaign=footer', title: t(:"titles.start_group")}= t :'navigation.start_group'
-            %li.footer__item.footer__contact-link
-              %a{href: '/contact', title: t(:"titles.contact")}= t :'navigation.contact'
-            %li.footer__item.footer__help-link
-              %a{href: @help_link, target: '_blank', title: t(:"titles.new_tab")}= t :'navigation.help'
-            %li.footer__item.footer__guides-link
-              %a{href: 'http://blog.diehard.fund/category/guides', target: '_blank', title: t(:"titles.new_tab")}= t :'navigation.guides_and_tips'
-            %li.footer__item.footer__github-link
-              %a{href: 'https://github.com/diehard_fund/diehard_fund', target: '_blank', title: t(:"titles.new_tab")}= t :'navigation.developers'
-            %li.footer__item.footer__tos-link
-              %a{href: 'https://diehard_fund.gitbooks.io/manual/content/en/terms_of_service.html', target: '_blank', title: t(:"titles.new_tab")}= t :'navigation.terms_of_service'
-            %li.footer__item.footer__privacy-policy-link
-              %a{href: 'https://diehard_fund.gitbooks.io/manual/content/en/privacy_policy.html', target: '_blank', title: t(:"titles.new_tab")}= t :'navigation.privacy'
-          %ul.footer__list
-            %li.footer__item.footer__diehard_fund-school-link
-              %a{href: 'https://diehard_fund.school', target: '_blank', title: t(:"titles.new_tab")}= t :'navigation.diehard_fund_school'
-            %li.footer__item.footer__handbook-link
-              %a{href: 'https://diehard_fund.coop/', target: '_blank', title: t(:"titles.new_tab")}= t :'navigation.company_handbook'
-            %li.footer__item.footer__mailing-list-link
-              %a{href: 'http://eepurl.com/b51x_b', target: '_blank', title: t(:"titles.new_tab")}= t :'navigation.newsletter'
         .footer__trademark-statement.fs-small
           = t :'navigation.trademark_statement'
-        .footer__trademark-statement.fs-small
-          = t :'navigation.not_slack'
