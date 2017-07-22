@@ -4,13 +4,7 @@ module Plugins
       setup! 'diehard-dot-fund_org_plugin' do |plugin|
         plugin.enabled = true
 
-        DIEHARD_FUND_ORG_PAGES = %w(about
-                              browser_not_supported
-                              crowdfunding_celebration
-                              index
-                              pricing
-                              translation
-                              wallets)
+        DIEHARD_FUND_ORG_PAGES = %w(index)
         DIEHARD_FUND_ORG_PAGES.each { |page| plugin.use_page page, "pages##{page}" }
         plugin.use_class 'controllers/pages_controller'
 
